@@ -1,0 +1,9 @@
+Method,Precision,Weight_MB,MACs_G,Train_FullBright_Acc,Train_pi2_Acc,Train_Fassign,Train_delta_FP32,Train_Detected_Full,Train_Detected_pi2,Train_MAE_px,Train_CR_Full,Train_CR_pi2,Bench_FullBright_Acc,Bench_pi2_Acc,Bench_Fassign,Bench_delta_FP32,Bench_Detected_Full,Bench_Detected_pi2,Bench_MAE_px,Bench_CR_Full,Bench_CR_pi2
+OpenCV Otsu + 8-Conn CCL,8-bit Pixel,0.00,0.00,97.85%,96.82%,97.34%,---,145.3,149.0,0.781,---,---,97.95%,95.28%,96.62%,---,144.6,147.3,0.893,---,---
+Standard U-Net,INT8 Per-Ch Symm,31.04,23.81,99.87%,93.99%,96.93%,-0.00%,300.1,152.9,0.563,25.1x,49.2x,99.94%,94.68%,97.31%,-0.00%,300.0,146.7,0.480,25.1x,51.3x
+ViTSeg,INT8 Per-Ch Symm,5.29,4.15,99.87%,93.55%,96.71%,+0.01%,300.0,150.9,0.561,25.1x,49.8x,99.94%,93.89%,96.91%,-0.02%,300.0,149.1,0.480,25.1x,50.5x
+PSFANet / This_Works,INT8 Per-Ch Symm,4.68,3.82,99.86%,93.64%,96.75%,-0.09%,300.0,153.5,0.563,25.1x,49.0x,99.91%,93.65%,96.78%,-0.24%,300.0,145.7,0.482,25.1x,51.6x
+DWNetV2_pretrained,INT8 Per-Ch Symm,4.68,3.82,99.87%,86.52%,93.19%,-3.68%,300.0,152.3,0.582,25.1x,49.4x,99.89%,91.71%,95.80%,-1.23%,299.9,142.3,0.504,25.1x,52.9x
+DWNetV2_pretrained,HLS ap_fixed<8_I> + CCL,4.68,3.82,95.54%,91.79%,93.66%,-3.21%,286.4,144.8,0.616,26.3x,51.9x,95.39%,91.22%,93.31%,-3.72%,285.5,134.7,0.567,26.4x,55.8x
+DWNetV2_scratch,INT8 Per-Ch Symm,4.68,3.82,99.85%,93.53%,96.69%,+0.01%,300.0,150.9,0.562,25.1x,49.9x,99.94%,93.83%,96.88%,-0.00%,300.0,148.3,0.479,25.1x,50.7x
+Ours: DWNetV2_scratch,HLS ap_fixed<8_I> + CCL,0.76-4.68,1.08-3.82,99.85%,93.48%,96.66%,-0.02%,300.0,150.5,0.562,25.1x,50.0x,99.94%,93.76%,96.85%,-0.03%,300.0,148.5,0.479,25.1x,50.7x

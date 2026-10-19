@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.o
+*.exe
+*.log
+*.jou
+*.pb
+*.rpx
+.Xil/
+dwnet_unet/
