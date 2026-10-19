@@ -2,7 +2,7 @@
 
 **On-Camera FPGA Acceleration of Depthwise Separable U-Net and Streaming Centroid Extraction for 300-Ion Quantum Readout Compression**
 
-This repository contains the Vitis HLS hardware accelerator source code (`fpga_hls/`), PyTorch segmentation models (`nets/`), trained 8-bit/FP32 checkpoints (`weights/`), unified `INT8` & `ap_fixed<8,I>` evaluation scripts (`scripts/`), and synthesis/benchmark artifacts (`results/`, `figures/`) for on-camera real-time readout compression of 300-ion $^{171}\text{Yb}^+$ quantum registers on a Xilinx Kintex-7 (`xc7k325tffg900-2`) FPGA.
+This repository contains the GSENSE6504BSI sCMOS camera control & readout Verilog RTL (`camera_fpga_rtl/`), Vitis HLS hardware accelerator source code (`fpga_hls/`), PyTorch segmentation models (`nets/`), trained 8-bit/FP32 checkpoints (`weights/`), unified `INT8` & `ap_fixed<8,I>` evaluation scripts (`scripts/`), and synthesis/benchmark artifacts (`results/`, `figures/`) for on-camera real-time readout compression of 300-ion $^{171}\text{Yb}^+$ quantum registers on a Xilinx Kintex-7 (`xc7k325tffg900-2`) FPGA.
 
 ---
 
@@ -55,6 +55,17 @@ Instead of streaming full $88 \times 456$ 18-bit sCMOS camera frames ($90,288\te
 
 ```text
 FPGA_300Ion_Quantum_Readout/
+├── camera_fpga_rtl/           # GSENSE6504BSI sCMOS camera control & readout Verilog RTL (Kintex-7)
+│   ├── rtl/top/               # Top-level camera bring-up & readout module (g6504_bringup_top.v)
+│   ├── rtl/sensor_ctrl/       # 6-step power sequencer, IDT clock init, SPI master, AA55 bridge & UART
+│   ├── rtl/lvds_rx_training/  # 16-lane ISERDESE2/IDELAYE2 LVDS RX, eye training & sync-code parser
+│   ├── rtl/image_ddr_path/    # Top/bottom channel reorder, DDR3 MIG frame buffer & pixel packer
+│   ├── rtl/usb3_fx3/          # Cypress FX3 USB 3.0 32-bit Slave FIFO RX/TX & protocol decoders
+│   ├── rtl/timing_instrumentation/ # Cross-clock exposure-to-USB latency & word-count monitors
+│   ├── constraints/           # Pinout, LVDS I/O, DDR3 MIG & timing constraints (g6504_k7_cc2405.xdc)
+│   ├── ip_xci/                # Xilinx Vivado IP core configurations (.xci & mig_a.prj)
+│   ├── host_control/          # Python USB 3.0 / AA55 camera configuration, GUI & auto-exposure tools
+│   └── create_vivado_project.tcl # Automated Vivado project reconstruction script
 ├── fpga_hls/                  # Vitis HLS 2022.2 C++ accelerator & streaming CCL sources
 │   ├── dwnet_config.h         # Image dimensions (88x456) and hardware configuration
 │   ├── dwnet_types.h          # 18-bit activation & layer-adaptive 8-bit weight types
@@ -76,19 +87,25 @@ FPGA_300Ion_Quantum_Readout/
 
 ## Quick Start
 
-### 1. Run Vitis HLS C-Simulation and Synthesis
+### 1. Reconstruct the Camera Control FPGA Vivado Project (Verilog RTL)
+```bash
+cd camera_fpga_rtl
+vivado -mode batch -source create_vivado_project.tcl
+```
+
+### 2. Run Vitis HLS C-Simulation and Synthesis
 ```bash
 cd fpga_hls
 vitis_hls -f run_hls.tcl
 ```
 
-### 2. Run Unified INT8 & Hardware Fixed-Point Evaluation
+### 3. Run Unified INT8 & Hardware Fixed-Point Evaluation
 ```bash
 pip install -r requirements.txt
 python scripts/test_int8_all.py
 ```
 
-### 3. Regenerate Area-Latency Pareto & Layer Ablation Figures
+### 4. Regenerate Area-Latency Pareto & Layer Ablation Figures
 ```bash
 python scripts/plot_iscas_pareto.py
 ```

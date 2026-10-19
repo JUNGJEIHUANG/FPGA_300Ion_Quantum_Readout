@@ -8,3 +8,10 @@ __pycache__/
 *.rpx
 .Xil/
 dwnet_unet/
+vivado_project/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
