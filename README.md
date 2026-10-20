@@ -22,32 +22,172 @@ Instead of streaming full $88 \times 456$ 18-bit sCMOS camera frames ($90,288\te
 
 ![Area-Latency Pareto and Layer Ablation](figures/G_ISCAS_Area_Latency_Pareto_Ablation.png)
 
-| Metric / Resource | Kintex-7 Available | Run #1: Baseline | Run #2: DSP-Unrolled | **Run #3: Proposed Optimal** |
+| Architecture & Synthesis Metric | Kintex-7 Budget | Run #1: Baseline | Run #2: DSP-Unrolled | Run #3: Proposed Optimal |
 | :--- | :---: | :---: | :---: | :---: |
-| Skip FIFO / DWConv Line Buffer | — | 18-bit Native FIFO | 16-bit Dual-8b + $2^k$ Split | **14b Stage-Adaptive FIFO + 16b Dual-`UQ3.5` LB** |
-| Pointwise Load Schedule | — | Scalar (`UF=2, II=1`) | Element RMW (`UF<=32, II=1`) | **Whole-Word Burst (`UF<=32, II=UF`)** |
-| Total `BRAM_18K` Blocks (%) | `890` (`100%`) | `3,288` (`369.4%`, *Overflow*) | `965` (`108.4%`, *Overflow*) | **877 (98.5%, Fits Device)** |
-| Total `DSP48E1` / `FF` | `840` / `407,600` | `319` (`38.0%`) / `76.1k` | `463` (`55.1%`) / `124.1k` | **400 (47.6%) / 102,604 (25.2%)** |
-| Total `LUT` (%) | `203,800` (`100%`) | `82,032` (`40.3%`) | `224,023` (`109.9%`, *Overflow*) | **172,945 (84.9%, Fits Device)** |
-| Estimated $T_{\text{clk}}$ ($F_{\max}$) | `5.000 ns` (`200 MHz`) | `5.521 ns` (`181.12 MHz`) | `4.850 ns` (`206.20 MHz`) | **4.176 ns (239.43 MHz, +32.2%)** |
-| Dominant `invres4_pw1` Time | — | `557.85 ms` (`101.04M` cyc) | `25.49 ms` (`5.26M` cyc) | **20.95 ms (5.02M cyc, 26.63$\times$)** |
-| Dataflow Frame Interval | — | `557.85 ms` (`1.79 FPS`) | `84.40 ms` (`11.85 FPS`) | **72.69 ms (13.76 FPS, 7.67$\times$)** |
-| C-Sim Detected Ion Count | `289 / 289` GT | `289 / 289` (`100%`) | `289 / 289` (`100%`) | **289 / 289 (100%, Zero Loss)** |
+| **Optimization Strategy** | | | | |
+| Skip FIFO & DWConv Line Buffer | — | 18-bit Native FIFO | 16-bit Dual-8b + 2ᵏ Split | **14b Stage-Adaptive + 16b Dual-UQ3.5** |
+| Pointwise Schedule & Reshaper | — | Scalar (`UF=2, II=1`) | Element RMW (`UF≤32, II=1`) | **Whole-Word Burst (`UF≤32, II=UF`)** |
+| **FPGA Resource Utilization** | | | | |
+| Total BRAM_18K Blocks | 890 (100%) | 3,288 *(369.4% · Overflow ❌)* | 965 *(108.4% · Overflow ❌)* | **877 (98.5% · Fits Device ✅)** |
+| Total DSP48E1 / FF | 840 / 407,600 | 319 (38.0%) / 76.1k | 463 (55.1%) / 124.1k | **400 (47.6%) / 102,604 (25.2%)** |
+| Total LUT Usage | 203,800 (100%) | 82,032 (40.3%) | 224,023 *(109.9% · Overflow ❌)* | **172,945 (84.9% · Fits Device ✅)** |
+| **Timing & Throughput** | | | | |
+| Estimated Clock Period / F_max | 5.000 ns (200 MHz) | 5.521 ns (181.12 MHz) | 4.850 ns (206.20 MHz) | **4.176 ns (239.43 MHz, +32.2%)** |
+| Dominant Layer (`invres4_pw1`) | — | 557.85 ms (101.04M cyc) | 25.49 ms (5.26M cyc) | **20.95 ms (5.02M cyc, 26.63× ⚡)** |
+| Dataflow Frame Interval | — | 557.85 ms (1.79 FPS) | 84.40 ms (11.85 FPS) | **72.69 ms (13.76 FPS, 7.67× ⚡)** |
+| **Fidelity Verification** | | | | |
+| C-Sim Detected Ion Count | 289 / 289 GT | 289 / 289 (100%) | 289 / 289 (100%) | **289 / 289 (100%, Zero Loss ✅)** |
 
 ---
 
-## Unified 8-Bit (`INT8` & `HLS ap_fixed<8,I>`) Readout Benchmark
+## Unified 8-Bit (INT8 & HLS ap_fixed<8,I>) Readout Benchmark
 
-| Method / 8-Bit Quantized Model | INT8 Wt. / MACs | `Train` Full / $\pi/2$ / $F_{\text{assign}}$ ($\Delta$FP32) | `Train` Ions (Full / $\pi/2$) | `Benchmark` Full / $\pi/2$ / $F_{\text{assign}}$ ($\Delta$FP32) | `Benchmark` Ions / MAE / $\text{CR}_{\text{bit}}$ |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| `OpenCV Otsu + 8-Conn CCL` | `0 KB` / — | `97.85%` / `96.82%` / `97.34%` | `145.3` / `149.0` | `97.95%` / `95.28%` / `96.62%` | `144.6` / `147.3` \| `0.893 px` \| — |
-| `Standard U-Net [INT8]` | `31.04 MB` / `23.81G` | `99.87%` / **93.99%** / **96.93%** (`-0.00%`) | `300.1` / `152.9` | **99.94%** / **94.68%** / **97.31%** (`-0.00%`) | **300.0** / `146.7` \| `0.480 px` \| `25.1x, 51.3x` |
-| `ViTSeg [INT8]` | `5.29 MB` / `4.15G` | `99.87%` / `93.55%` / `96.71%` (`+0.01%`) | **300.0** / `150.9` | **99.94%** / `93.89%` / `96.91%` (`-0.02%`) | **300.0** / `149.1` \| `0.480 px` \| `25.1x, 50.5x` |
-| `PSFANet [INT8]` | `4.68 MB` / `3.82G` | `99.86%` / `93.64%` / `96.75%` (`-0.09%`) | **300.0** / `153.5` | `99.91%` / `93.65%` / `96.78%` (`-0.24%`) | **300.0** / `145.7` \| `0.482 px` \| `25.1x, 51.6x` |
-| `DWNetV2_pretrained [INT8]` | `4.68 MB` / `3.82G` | `99.87%` / `86.52%` / `93.19%` (`-3.68%`) | **300.0** / `152.3` | `99.89%` / `91.71%` / `95.80%` (`-1.23%`) | `299.9` / `142.3` \| `0.504 px` \| `25.1x, 52.9x` |
-| `DWNetV2_pretrained [HLS ap_fixed<8,I>]` | `4.68 MB` / `3.82G` | `95.54%` / `91.79%` / `93.66%` (`-3.21%`) | `286.4` / `144.8` | `95.39%` / `91.22%` / `93.31%` (`-3.72%`) | `285.5` / `134.7` \| `0.567 px` \| `26.4x, 55.8x` |
-| `DWNetV2_scratch [INT8]` | `4.68 MB` / `3.82G` | `99.85%` / `93.53%` / `96.69%` (`+0.01%`) | **300.0** / `150.9` | **99.94%** / `93.83%` / `96.88%` (`-0.00%`) | **300.0** / `148.3` \| **0.479 px** \| `25.1x, 50.7x` |
-| **Ours: `DWNetV2_scratch [HLS ap_fixed<8,I> + CCL]`** | **0.76–4.68 MB** | **99.85%** / **93.48%** / **96.66%** (**`-0.02%`**) | **300.0** / **150.5** | **99.94%** / **93.76%** / **96.85%** (**`-0.03%`**) | **300.0** / **148.5** \| **0.479 px** \| **25.1x, 50.7x** |
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" align="left">Method / Model</th>
+      <th rowspan="2" align="center">Precision</th>
+      <th colspan="2" align="center">Complexity</th>
+      <th colspan="4" align="center">Training Subset (Diagnostic)</th>
+      <th colspan="5" align="center">Real1600 Benchmark (Testset)</th>
+    </tr>
+    <tr>
+      <th align="center">Weights</th>
+      <th align="center">MACs</th>
+      <th align="center">Full (%)</th>
+      <th align="center"><i>F</i><sub>assign</sub></th>
+      <th align="center">Ions (Full/π/2)</th>
+      <th align="center">MAE</th>
+      <th align="center">Full (%)</th>
+      <th align="center">π/2 (%)</th>
+      <th align="center"><i>F</i><sub>assign</sub> (ΔFP32)</th>
+      <th align="center">MAE (px)</th>
+      <th align="center">Bit-CR (Full / π/2)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">OpenCV Otsu + 8-Conn CCL</td>
+      <td align="center">8-bit Pixel</td>
+      <td align="center">0 KB</td>
+      <td align="center">—</td>
+      <td align="center">97.85%</td>
+      <td align="center">97.34%</td>
+      <td align="center">145.3 / 149.0</td>
+      <td align="center">0.781 px</td>
+      <td align="center">97.95%</td>
+      <td align="center">95.28%</td>
+      <td align="center">96.62% (—)</td>
+      <td align="center">0.893 px</td>
+      <td align="center">—</td>
+    </tr>
+    <tr>
+      <td align="left">Standard U-Net</td>
+      <td align="center">INT8 Per-Ch</td>
+      <td align="center">31.04 MB</td>
+      <td align="center">23.81G</td>
+      <td align="center">99.87%</td>
+      <td align="center"><b>96.93%</b></td>
+      <td align="center">300.1 / 152.9</td>
+      <td align="center">0.563 px</td>
+      <td align="center"><b>99.94%</b></td>
+      <td align="center"><b>94.68%</b></td>
+      <td align="center"><b>97.31%</b> (-0.00%)</td>
+      <td align="center">0.480 px</td>
+      <td align="center">25.1× / 51.3×</td>
+    </tr>
+    <tr>
+      <td align="left">ViTSeg</td>
+      <td align="center">INT8 Per-Ch</td>
+      <td align="center">5.29 MB</td>
+      <td align="center">4.15G</td>
+      <td align="center">99.87%</td>
+      <td align="center">96.71%</td>
+      <td align="center">300.0 / 150.9</td>
+      <td align="center">0.561 px</td>
+      <td align="center"><b>99.94%</b></td>
+      <td align="center">93.89%</td>
+      <td align="center">96.91% (-0.02%)</td>
+      <td align="center">0.480 px</td>
+      <td align="center">25.1× / 50.5×</td>
+    </tr>
+    <tr>
+      <td align="left">PSFANet</td>
+      <td align="center">INT8 Per-Ch</td>
+      <td align="center">4.68 MB</td>
+      <td align="center">3.82G</td>
+      <td align="center">99.86%</td>
+      <td align="center">96.75%</td>
+      <td align="center">300.0 / 153.5</td>
+      <td align="center">0.563 px</td>
+      <td align="center">99.91%</td>
+      <td align="center">93.65%</td>
+      <td align="center">96.78% (-0.24%)</td>
+      <td align="center">0.482 px</td>
+      <td align="center">25.1× / 51.6×</td>
+    </tr>
+    <tr>
+      <td align="left">DWNetV2_pretrained</td>
+      <td align="center">INT8 Per-Ch</td>
+      <td align="center">4.68 MB</td>
+      <td align="center">3.82G</td>
+      <td align="center">99.87%</td>
+      <td align="center">93.19%</td>
+      <td align="center">300.0 / 152.3</td>
+      <td align="center">0.582 px</td>
+      <td align="center">99.89%</td>
+      <td align="center">91.71%</td>
+      <td align="center">95.80% (-1.23%)</td>
+      <td align="center">0.504 px</td>
+      <td align="center">25.1× / 52.9×</td>
+    </tr>
+    <tr>
+      <td align="left">DWNetV2_pretrained</td>
+      <td align="center">HLS <code>ap_fixed</code></td>
+      <td align="center">4.68 MB</td>
+      <td align="center">3.82G</td>
+      <td align="center">95.54%</td>
+      <td align="center">93.66%</td>
+      <td align="center">286.4 / 144.8</td>
+      <td align="center">0.616 px</td>
+      <td align="center">95.39%</td>
+      <td align="center">91.22%</td>
+      <td align="center">93.31% (-3.72%)</td>
+      <td align="center">0.567 px</td>
+      <td align="center">26.4× / 55.8×</td>
+    </tr>
+    <tr>
+      <td align="left">DWNetV2_scratch</td>
+      <td align="center">INT8 Per-Ch</td>
+      <td align="center">4.68 MB</td>
+      <td align="center">3.82G</td>
+      <td align="center">99.85%</td>
+      <td align="center">96.69%</td>
+      <td align="center">300.0 / 150.9</td>
+      <td align="center">0.562 px</td>
+      <td align="center"><b>99.94%</b></td>
+      <td align="center">93.83%</td>
+      <td align="center">96.88% (-0.00%)</td>
+      <td align="center"><b>0.479 px</b></td>
+      <td align="center">25.1× / 50.7×</td>
+    </tr>
+    <tr>
+      <td align="left"><b>Ours: DWNetV2_scratch</b></td>
+      <td align="center"><b>HLS + CCL</b></td>
+      <td align="center"><b>0.76–4.68 MB</b></td>
+      <td align="center"><b>1.08–3.82G</b></td>
+      <td align="center">99.85%</td>
+      <td align="center">96.66%</td>
+      <td align="center"><b>300.0 / 150.5</b></td>
+      <td align="center"><b>0.562 px</b></td>
+      <td align="center"><b>99.94%</b></td>
+      <td align="center">93.76%</td>
+      <td align="center">96.85% (<b>-0.03%</b>)</td>
+      <td align="center"><b>0.479 px</b></td>
+      <td align="center"><b>25.1× / 50.7×</b></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
