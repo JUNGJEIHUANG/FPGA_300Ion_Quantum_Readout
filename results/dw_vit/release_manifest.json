@@ -1,5 +1,5 @@
 {
-  "scope": "Explicit release delta; hashes verified against actual staged Git blobs",
+  "scope": "Cumulative DW-ViT source/results release allowlist; hashes verified against staged Git blobs",
   "files": [
     {
       "path": ".gitattributes",
@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4611,
-      "sha256": "e3512bb6074c4b6f093166e2755371d41ee1a74bb30e09be1cd9e49d11407068"
+      "bytes": 5915,
+      "sha256": "92be309da8aaf2388a876b8ffb13b91cb88ef412d48606e944fc67af441e450f"
     },
     {
       "path": "docs/legacy/DWNetV2_README.md",
@@ -73,8 +73,8 @@
     },
     {
       "path": "dw_vit/README.md",
-      "bytes": 4258,
-      "sha256": "bc17333c3d9f4ccadf7e7e91e78ac4cfb1ff6b11117dc3ec0b5b7bef5ced1607"
+      "bytes": 5464,
+      "sha256": "2c8d214010c9e82fb6d22186ae5dae6396f312649f939e432d8146e60870cf6f"
     },
     {
       "path": "dw_vit/hardware/rtl/T_usb_axi_master.sv",
@@ -237,6 +237,11 @@
       "sha256": "896099fb6893d85d28dfebaf6f6212abc8edb2f89c93653a4b2b8cb257988ea7"
     },
     {
+      "path": "dw_vit/tests/audit_board_results.py",
+      "bytes": 7424,
+      "sha256": "0f1af3503daaa1f42893c891949b01de73f530cdf909b346679ebd62a173283a"
+    },
+    {
       "path": "dw_vit/tests/test_model.py",
       "bytes": 768,
       "sha256": "fc5e17e48409386f1439848c15121d21283b2544943086ef087579bc58192a61"
@@ -283,13 +288,23 @@
     },
     {
       "path": "results/dw_vit/board_full_snapshot.json",
-      "bytes": 3847,
-      "sha256": "b98707274dece3b919cdf79da65f9a1e2cd44d88dbcc4b6dd6be0cab1863ccc9"
+      "bytes": 4391,
+      "sha256": "998c239fa5e6b0a5cfaeae1975db51127b15e16c2a36303735ac78a6f9632acb"
+    },
+    {
+      "path": "results/dw_vit/board_output_hashes.json",
+      "bytes": 369771,
+      "sha256": "beeb78f42b685a5bc4a20c4875af543cb74507bfff5716c1b79ba20c42e73911"
     },
     {
       "path": "results/dw_vit/board_pilot_snapshot.json",
       "bytes": 4146,
       "sha256": "983884c6c76f2ecdaa362edb4a4a27bc106ac85d4fea778a5c80dbebf8b8d898"
+    },
+    {
+      "path": "results/dw_vit/final_board_audit.json",
+      "bytes": 5362,
+      "sha256": "22cb423703d4ba179802cc99beb0b35a8478fd29cc2df0e6ce7622034c6d8051"
     },
     {
       "path": "results/dw_vit/main_comparison.tex",
@@ -308,8 +323,8 @@
     },
     {
       "path": "results/dw_vit/release_summary.json",
-      "bytes": 4702,
-      "sha256": "a89a8930d94cb75fa8ec0f7389b18a159c294ae1229c376ea1f34e0a56df9d66"
+      "bytes": 9108,
+      "sha256": "42ab7035346fe75e477c2ca306066a9b462c197bc6b9440d58a1e007373c7493"
     },
     {
       "path": "results/dw_vit/reports/T_architecture_profile.json",
@@ -413,8 +428,8 @@
     },
     {
       "path": "results/dw_vit/source_provenance.json",
-      "bytes": 29202,
-      "sha256": "2786b297b57bb7a85af67be4ac0b87358014a3cfe3bd03bc8edede906f998028"
+      "bytes": 30020,
+      "sha256": "46d26afb96569bff51b95a257e61d77176bc45b01be2bf764297e17f9233d299"
     },
     {
       "path": "results/dw_vit/training/dw/best_validation_summary.json",
@@ -457,16 +472,17 @@
       "sha256": "9787c6cb987656e13383376b3ac30b150e1d1154cde1082adeda4cf31488e56f"
     }
   ],
-  "files_scanned": 91,
-  "total_bytes": 2051755,
+  "files_scanned": 94,
+  "total_bytes": 2442590,
   "credential_scan": "No configured secret-pattern matches",
   "raw_images_gt_and_per_frame_outputs_uploaded": false,
   "new_trained_checkpoints_or_rom_contents_uploaded": false,
   "full_run_snapshot": {
-    "status": "partial",
-    "completed": 1555,
+    "status": "complete",
+    "completed": 2000,
     "requested": 2000,
     "bitstream_sha256": "a971ecf7969c31e0a20d39fa54e8d56b1dd71b8b815eb44dd1afd54c7198bf15"
   },
-  "note": "Manifest excludes its own file. Byte-preserving attributes keep original report and code fingerprints stable. Existing legacy contents are not revalidated."
+  "complete_board_audit": "passed: 2000 output hashes, decoded records, input signatures, and independently recomputed scores",
+  "note": "Manifest excludes its own file. Existing legacy contents remain unchanged; software FP32 results are not replaced by hardware results."
 }

@@ -27,11 +27,26 @@ DW-ViT is **not smaller than every baseline**. Its run has **219 unmatched detec
 
 Software W8/A18 boundary validation (5,000 validation frames) is not HLS/RTL hardware accuracy: FP32 all-site/all-300 = 99.4727%/50.00%; boundary simulation = 99.4733%/50.32%. Internal numerical executions differ; one checked frame has seven differing mask pixels between the boundary simulation and complete HLS C.
 
-## Board evidence at this release snapshot
+## Completed FPGA dataset replay
 
-- Five category-spanning pilot frames complete USB preload, core execution, and result return. The fast and serial hardware record streams match on those five frames.
-- Full-run snapshot: **1555/2000 frames, status `partial`**. See [the frozen board snapshot](results/dw_vit/board_full_snapshot.json). An incomplete prefix must not be presented as completed full-benchmark accuracy. A separately running local experiment is not a promise that this published snapshot updates automatically.
-- The camera returns **bright-ion centroid/area records**. Site-state assignment uses annotations for offline scoring only. Live-ion input, calibrated sensor-to-network input, direct on-board 300-bit state-register output, and closed-loop feedback are not demonstrated.
+The selected channel-parallel DW-ViT bitstream completed **2,000/2,000 frames**. An independent offline audit verified exactly 2,000 unique IDs, all raw output-file SHA-256 hashes, decoded centroid/area records, input counts/signatures, and transport checks. Offline site predictions and all aggregate metrics were recomputed from the frozen annotations and match the run summary.
+
+The benchmark was previously exposed during development. Hardware rows below are **FPGA output records scored offline**, not software boundary simulation and not directly emitted 300-bit state registers.
+
+| Execution | All Site Accuracy (%) | All-300 Correct (%) | Mixed Site Accuracy (%) | Mixed All-300 Correct (%) | Extra Detections | All Record-Exact (%) |
+|---|---:|---:|---:|---:|---:|---:|
+| FP32 software | 99.2803 | 39.15 | 98.9520 | 5.40 | 219 | 34.95 |
+| FPGA W8/A18 realization | **99.2882** | **38.90** | **98.9697** | **4.90** | **224** | **34.65** |
+
+The complete replay establishes full-dataset board execution, **not numerical equivalence to FP32**. State-level point estimates change in different directions; extra detections increase and record-exact accuracy decreases. Do not replace the FP32 baseline-comparison table with hardware numbers as if they used the same numerical execution.
+
+Evidence:
+- [Final aggregate board results](results/dw_vit/board_full_snapshot.json)
+- [Independent 2,000-frame audit](results/dw_vit/final_board_audit.json)
+- [Per-frame raw-output hashes, without centroids or truth](results/dw_vit/board_output_hashes.json)
+- [Model, bitstream, and release summary](results/dw_vit/release_summary.json)
+
+The earlier five-frame serial/fast hardware consistency check is retained as separate evidence. It is not extended to all 2,000 frames or equated with full HLS-C/RTL bit equivalence. The camera returns bright-ion centroid/area records; site-state assignment uses annotations for offline scoring only. Live-ion input, calibrated sensor-to-network input, direct on-board 300-bit output, and closed-loop feedback remain unverified.
 
 ## Code map
 

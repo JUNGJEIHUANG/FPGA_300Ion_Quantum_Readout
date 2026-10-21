@@ -398,8 +398,8 @@
   {
     "source_workspace": "vit0392_depthwise_20261021\\reports\\T_board_dw_dilated_fast_full\\T_summary.json",
     "destination": "results/dw_vit/board_full_snapshot.json",
-    "original_sha256": "b98707274dece3b919cdf79da65f9a1e2cd44d88dbcc4b6dd6be0cab1863ccc9",
-    "release_sha256": "b98707274dece3b919cdf79da65f9a1e2cd44d88dbcc4b6dd6be0cab1863ccc9"
+    "original_sha256": "998c239fa5e6b0a5cfaeae1975db51127b15e16c2a36303735ac78a6f9632acb",
+    "release_sha256": "998c239fa5e6b0a5cfaeae1975db51127b15e16c2a36303735ac78a6f9632acb"
   },
   {
     "source_workspace": "vit0392_depthwise_20261021\\runs\\dw\\run_config.json",
@@ -502,5 +502,19 @@
     "destination": "figures/dw_vit/T_hardware_optimization_reconstructed.png",
     "original_sha256": "f62b01bc1c3f1877e653237c7af428f10c4386e1752d6a217deea157b2f67566",
     "release_sha256": "f62b01bc1c3f1877e653237c7af428f10c4386e1752d6a217deea157b2f67566"
+  },
+  {
+    "source_workspace": "output/T_DW_ViT_full_board_audit.json",
+    "destination": "results/dw_vit/final_board_audit.json",
+    "original_sha256": "22cb423703d4ba179802cc99beb0b35a8478fd29cc2df0e6ce7622034c6d8051",
+    "release_sha256": "22cb423703d4ba179802cc99beb0b35a8478fd29cc2df0e6ce7622034c6d8051",
+    "scope": "Offline audit output; raw board records and benchmark GT excluded."
+  },
+  {
+    "source_workspace": "output/T_DW_ViT_full_board_output_hashes.json",
+    "destination": "results/dw_vit/board_output_hashes.json",
+    "original_sha256": "beeb78f42b685a5bc4a20c4875af543cb74507bfff5716c1b79ba20c42e73911",
+    "release_sha256": "beeb78f42b685a5bc4a20c4875af543cb74507bfff5716c1b79ba20c42e73911",
+    "scope": "Offline audit output; raw board records and benchmark GT excluded."
   }
 ]

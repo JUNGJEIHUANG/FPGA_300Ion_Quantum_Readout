@@ -45,3 +45,13 @@ The camera integration preserves sensor/DDR logic but uses **preloaded dataset r
 ## Environment
 
 Recorded runs used Python/PyTorch 2.11, CUDA-enabled training, Vitis HLS 2022.2 and Vivado 2022.2. See the per-run JSON files for exact configuration and checkpoint hashes. Do not substitute different checkpoints/thresholds for the archived measurements.
+
+## Audit the completed board run (offline only)
+
+`tests/audit_board_results.py` independently checks a complete run and recomputes site/record metrics. It does not open a USB/JTAG connection or perform inference, training, or model selection. Supply the locally held raw packet files and frozen fixture; neither raw packets nor truth arrays are included in the public release.
+
+```powershell
+python dw_vit/tests/audit_board_results.py --run-dir <complete-run-folder> --fixture-dir <frozen-benchmark-folder> --checkpoint <selected-best.pth> --bitstream <attested.bit> --attestation <attestation.json> --output <new-audit.json> --output-hashes <new-hashes.json>
+```
+
+The auditor refuses existing output files and requires `complete`, exactly 2,000 requested/completed unique frames, matching checkpoint/bitstream hashes, intact input signatures and packet hashes, valid raw centroid records, and agreement between recomputed and recorded scores. Published outputs contain aggregate metrics and output hashes, not image pixels, coordinates, truth labels, or per-frame state predictions. An aggregate FPGA-versus-FP32 comparison is in the repository README; these are distinct numerical executions.
