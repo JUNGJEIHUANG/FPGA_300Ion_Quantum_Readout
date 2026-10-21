@@ -1,0 +1,151 @@
+{
+  "espnet": {
+    "repository": "sacmehta/ESPNet",
+    "commit": "afe71c38edaee3514ca44e0adcafdf36109bf437",
+    "files": {
+      "LICENSE": {
+        "sha256": "1a1aeeccef3f0325129cc62ddbe836df5814bf0e7b6bcef35a7ad884b54402d7",
+        "url": "https://raw.githubusercontent.com/sacmehta/ESPNet/afe71c38edaee3514ca44e0adcafdf36109bf437/LICENSE",
+        "bytes": 1069
+      },
+      "README.md": {
+        "sha256": "02f6d0090081425856a0a86cd80040820199bd0f343229fe20ac511bf6043637",
+        "url": "https://raw.githubusercontent.com/sacmehta/ESPNet/afe71c38edaee3514ca44e0adcafdf36109bf437/README.md",
+        "bytes": 3667
+      },
+      "train/Model.py": {
+        "sha256": "1defd0f9cee0745c449c9c8b654ff994f7252b6e18f64152f7c0f26d3e9bea0c",
+        "url": "https://raw.githubusercontent.com/sacmehta/ESPNet/afe71c38edaee3514ca44e0adcafdf36109bf437/train/Model.py",
+        "bytes": 12919
+      }
+    }
+  },
+  "cgnet": {
+    "repository": "wutianyiRosun/CGNet",
+    "commit": "cfccea377a6f0a659e807e8759c82dbffba02d7f",
+    "files": {
+      "LICENSE": {
+        "sha256": "6c11309c68c7019624751a7e6ef1edb35c3e9ca81f3812a34d031b89f125bf29",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/LICENSE",
+        "bytes": 1066
+      },
+      "README.md": {
+        "sha256": "63ecad667f66578ba4f170928a488763a5fc68d35ec1fab1076c6f8b05647f43",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/README.md",
+        "bytes": 5092
+      },
+      "model/BiSeNet_resnet.py": {
+        "sha256": "a1588cfaffd46df38c66f2e27b555ec74e6ed09afd7d247f4132faae451ff479",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/BiSeNet_resnet.py",
+        "bytes": 4479
+      },
+      "model/BiSeNet_xception.py": {
+        "sha256": "6d085ca10ebd5163c8de9594edf3bd03b6a7b9167f705145ca7b56b127c9b058",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/BiSeNet_xception.py",
+        "bytes": 4363
+      },
+      "model/CGNet.py": {
+        "sha256": "9c85a42574fde349a68f2b4488500dad4b737b1a95084c63a7141d2fd430326a",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/CGNet.py",
+        "bytes": 12503
+      },
+      "model/DFN.py": {
+        "sha256": "d015612f0f6df13a4b9453bcfc92ec18c4a56037d7e5bf0dab0d8ee49fca6c5c",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/DFN.py",
+        "bytes": 5516
+      },
+      "model/DeepLabV3plus_resnet.py": {
+        "sha256": "58c4e24a1d7d31dd8080d814609adf526f1e09f6cb5c4e6f9f09b9e7380075a2",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/DeepLabV3plus_resnet.py",
+        "bytes": 11136
+      },
+      "model/DeepLabV3plus_xception.py": {
+        "sha256": "f7a73dfc0a67a35451eec9f934eafd90e2618cc356dd5b28a4e2543848fad0be",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/DeepLabV3plus_xception.py",
+        "bytes": 15639
+      },
+      "model/DenseASPP.py": {
+        "sha256": "ce609b4958737a6abf93e0867f8d26d4154c5100d2566f9f994c251c7d179d8c",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/DenseASPP.py",
+        "bytes": 9428
+      },
+      "model/ENet.py": {
+        "sha256": "e25a6883cf83008147e9a8dc629512582692bf80ac67791d874a222b789c30c6",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/ENet.py",
+        "bytes": 10440
+      },
+      "model/ESPNet.py": {
+        "sha256": "8c4229aa821fe063cda62d65b30a5a3091160c6b1e271712d62891786f95f832",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/ESPNet.py",
+        "bytes": 13910
+      },
+      "model/PSPNet.py": {
+        "sha256": "0ccb3b29d47689f02e013de68f6e18306e657c09e284c9e7d6cce2993ae3aa8a",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/PSPNet.py",
+        "bytes": 9494
+      },
+      "model/SegNet.py": {
+        "sha256": "1d43ac5e65609d5f85588744eaa799b3a54e3560194278647e100f3f3c41c831",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/SegNet.py",
+        "bytes": 6398
+      },
+      "model/__init__.py": {
+        "sha256": "fa67ae87ffaba88a1965862e64eed8e4e2cdcf7f341de952a4ac93b6baf2c741",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/__init__.py",
+        "bytes": 333
+      },
+      "model/resnet.py": {
+        "sha256": "a2fa346a37195922c1037c68dc93c50e86c30bb6fdb763b12d23064fa137c0d7",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/resnet.py",
+        "bytes": 9559
+      },
+      "model/xception.py": {
+        "sha256": "a31e851bea8f658ed0c9ecc9f081692f6e7f9751443d878617f18cacce582e10",
+        "url": "https://raw.githubusercontent.com/wutianyiRosun/CGNet/cfccea377a6f0a659e807e8759c82dbffba02d7f/model/xception.py",
+        "bytes": 6875
+      }
+    }
+  },
+  "unext": {
+    "repository": "jeya-maria-jose/UNeXt-pytorch",
+    "commit": "6ad0855114a35afbf81decf5dc912cd8de70476a",
+    "files": {
+      "LICENSE": {
+        "sha256": "937c2c490f55b11c20af518ba4c094506041125553b7b42f290c495ba07cff74",
+        "url": "https://raw.githubusercontent.com/jeya-maria-jose/UNeXt-pytorch/6ad0855114a35afbf81decf5dc912cd8de70476a/LICENSE",
+        "bytes": 1072
+      },
+      "README.md": {
+        "sha256": "b4f6c30580c3935ebaf2f5fee516befbe30332531000218ac7b3527f34389a7b",
+        "url": "https://raw.githubusercontent.com/jeya-maria-jose/UNeXt-pytorch/6ad0855114a35afbf81decf5dc912cd8de70476a/README.md",
+        "bytes": 3869
+      },
+      "archs.py": {
+        "sha256": "7486a70d6398484da496727f49f7b0d0c14aac0b49bda0cd34b4f877737831ba",
+        "url": "https://raw.githubusercontent.com/jeya-maria-jose/UNeXt-pytorch/6ad0855114a35afbf81decf5dc912cd8de70476a/archs.py",
+        "bytes": 18089
+      }
+    }
+  },
+  "egeunet": {
+    "repository": "JCruan519/EGE-UNet",
+    "commit": "f52ba30c6bf7d0ca479c2c9d4a3cbda999f49d3a",
+    "files": {
+      "LICENSE": {
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "url": "https://raw.githubusercontent.com/JCruan519/EGE-UNet/f52ba30c6bf7d0ca479c2c9d4a3cbda999f49d3a/LICENSE",
+        "bytes": 11357
+      },
+      "README.md": {
+        "sha256": "d8d4d8b96e9486189c7a1c0069643c54e1a07104dc2860fadb73637f15f1da93",
+        "url": "https://raw.githubusercontent.com/JCruan519/EGE-UNet/f52ba30c6bf7d0ca479c2c9d4a3cbda999f49d3a/README.md",
+        "bytes": 1307
+      },
+      "models/egeunet.py": {
+        "sha256": "c9ae22ca5c6c13a74bb9f0b72958c35708e8b0853541f42e400df6c28ebfc310",
+        "url": "https://raw.githubusercontent.com/JCruan519/EGE-UNet/f52ba30c6bf7d0ca479c2c9d4a3cbda999f49d3a/models/egeunet.py",
+        "bytes": 14156
+      }
+    }
+  }
+}

@@ -15,3 +15,16 @@ vivado_project/
 *.ip_user_files/
 *.runs/
 *.sim/
+
+# DW-ViT local-only artifacts
+dw_vit/local_data/
+dw_vit/runs/
+dw_vit/reports/
+dw_vit/parameters/dw*/
+dw_vit/**/vit_parameters.h
+dw_vit/**/*.bit
+dw_vit/**/*.dcp
+dw_vit/**/*.ltx
+dw_vit/**/*.npy
+dw_vit/**/*.pth
+dw_vit/**/*.bin

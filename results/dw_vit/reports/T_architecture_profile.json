@@ -1,0 +1,10 @@
+{
+  "baseline_params": 392065,
+  "variant_params": 376321,
+  "baseline_total_macs": 1049587968,
+  "baseline_fullres_conv_macs": 739639296,
+  "variant_depthwise_macs": 23113728,
+  "variant_pointwise_macs": 82182144,
+  "variant_total_macs": 415244544,
+  "scope": "Analytic Conv/Linear/attention MACs only; excludes norm/softmax/nonlinear/memory/control/CCL; not FPGA timing"
+}

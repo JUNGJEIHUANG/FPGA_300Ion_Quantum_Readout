@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "epochs": 20,
+  "best_epoch": 18,
+  "parameters": 376321,
+  "best_sha256": "68a15a523b39314161c68838fa0cc76afcc3279b761c1be6330dae0ecae98097",
+  "test_accessed": false,
+  "converged": false
+}

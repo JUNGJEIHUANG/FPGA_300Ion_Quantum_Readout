@@ -1,0 +1,74 @@
+{
+  "dw": {
+    "ALL": {
+      "frames": 2000,
+      "site_accuracy_baseline": 0.9926783333333333,
+      "site_accuracy_variant": 0.9927116666666667,
+      "site_delta_percentage_points": 0.0033333333333333544,
+      "site_delta_ci95_percentage_points": [
+        -0.012500000000000032,
+        0.01883333333333337
+      ],
+      "e300_baseline": 0.382,
+      "e300_variant": 0.3805,
+      "e300_delta_percentage_points": -0.15,
+      "e300_delta_ci95_percentage_points": [
+        -1.2,
+        0.8500000000000001
+      ]
+    },
+    "mixed": {
+      "frames": 1000,
+      "site_accuracy_baseline": 0.9894666666666667,
+      "site_accuracy_variant": 0.98949,
+      "site_delta_percentage_points": 0.0023333333333333426,
+      "site_delta_ci95_percentage_points": [
+        -0.02567500000000016,
+        0.030666666666666585
+      ],
+      "e300_baseline": 0.05,
+      "e300_variant": 0.06,
+      "e300_delta_percentage_points": 1.0,
+      "e300_delta_ci95_percentage_points": [
+        -0.5,
+        2.4
+      ]
+    }
+  },
+  "dw_dilated": {
+    "ALL": {
+      "frames": 2000,
+      "site_accuracy_baseline": 0.9926783333333333,
+      "site_accuracy_variant": 0.9928033333333334,
+      "site_delta_percentage_points": 0.012499999999999949,
+      "site_delta_ci95_percentage_points": [
+        -0.004500000000000076,
+        0.02916666666666651
+      ],
+      "e300_baseline": 0.382,
+      "e300_variant": 0.3915,
+      "e300_delta_percentage_points": 0.95,
+      "e300_delta_ci95_percentage_points": [
+        -0.1,
+        1.95
+      ]
+    },
+    "mixed": {
+      "frames": 1000,
+      "site_accuracy_baseline": 0.9894666666666667,
+      "site_accuracy_variant": 0.98952,
+      "site_delta_percentage_points": 0.0053333333333333895,
+      "site_delta_ci95_percentage_points": [
+        -0.023999999999999647,
+        0.03433333333333345
+      ],
+      "e300_baseline": 0.05,
+      "e300_variant": 0.054,
+      "e300_delta_percentage_points": 0.4,
+      "e300_delta_ci95_percentage_points": [
+        -1.0999999999999999,
+        1.9
+      ]
+    }
+  }
+}

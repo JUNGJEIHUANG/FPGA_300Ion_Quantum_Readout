@@ -1,0 +1,45 @@
+{
+  "status": "selected_roster_frozen_before_suite_benchmark_access",
+  "created_utc": "2026-10-20T07:17:46.053513+00:00",
+  "user_selected_recent_within_existing_candidates": [
+    "unext_s",
+    "egeunet"
+  ],
+  "structurally_distinct_baseline": "espnet",
+  "evaluation_neural_order": [
+    "espnet",
+    "unext_s",
+    "egeunet",
+    "vit0392"
+  ],
+  "published_neural_baselines_count": 3,
+  "own_comparator": "vit0392",
+  "excluded_exploratory_model": "cgnet",
+  "third_baseline_rationale": "ESPNet dilated spatial-pyramid CNN differs from token multihead self-attention;365130 parameters are close to ViTSeg392065; not selected by test/validation rankings",
+  "parameter_cap": 500000,
+  "precision": "FP32",
+  "scratch": true,
+  "seed": 1,
+  "epochs": 20,
+  "parent_evaluation_policy_sha256": "5af991302a7b91c2145693a96a5fb10630cdde121d42cb534a48a9d37efd5162",
+  "amendment_file_sha256": {
+    "MAIN_COMPARISON_SCOPE.md": "c47076ab21cc9b868dcc6e377e1a8c0cf09b0ae5c599005e9b05855c7e85005c",
+    "scripts/finalize_selected3.py": "ae628f0305b84f322d681521d925a7f9792eb8fbd22af2157affc87e8051efff",
+    "scripts/finish_selected3.ps1": "3d3b3fd20c1a439d222386bdc70e4219cb1915ab4bcbbfb7bcffd2ecbd89315b"
+  },
+  "original_finisher_status": {
+    "status": "waiting_for_all_training",
+    "detail": "No benchmark images are accessed until all model checkpoints and validation thresholds are frozen.",
+    "updated": "2026-10-20T14:27:53.6686078+08:00",
+    "training_process_id": 51080
+  },
+  "training_implementation_changed": false,
+  "numerical_prediction_or_scoring_changed": false,
+  "traditional_baselines_unchanged": [
+    "ipm",
+    "otsu"
+  ],
+  "roi_retained_as_local_ablation": true,
+  "suite_test_accessed": false,
+  "previous_exposure_caveat": "Previously exposed benchmark remains repeat diagnostic, not a fresh blind test"
+}

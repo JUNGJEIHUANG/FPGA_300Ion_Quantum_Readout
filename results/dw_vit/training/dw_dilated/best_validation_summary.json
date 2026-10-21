@@ -1,0 +1,70 @@
+{
+  "objective": 0.10185951353311538,
+  "threshold": 0.5,
+  "groups": {
+    "ALL": {
+      "tp": 774648,
+      "fp": 3232,
+      "fn": 4736,
+      "tn": 717384,
+      "extra_packets": 298,
+      "state_exact": 2493,
+      "record_exact": 2345,
+      "frames": 5000,
+      "site_accuracy": 0.994688,
+      "false_bright_rate": 0.004485051678008814,
+      "false_dark_rate": 0.006076593822813914,
+      "state_exact_rate": 0.4986,
+      "record_exact_rate": 0.469,
+      "packet_errors": 8266
+    },
+    "150D_150B": {
+      "tp": 399767,
+      "fp": 3231,
+      "fn": 4617,
+      "tn": 342385,
+      "extra_packets": 129,
+      "state_exact": 106,
+      "record_exact": 103,
+      "frames": 2500,
+      "site_accuracy": 0.989536,
+      "false_bright_rate": 0.009348525531225406,
+      "false_dark_rate": 0.011417365672232333,
+      "state_exact_rate": 0.0424,
+      "record_exact_rate": 0.0412,
+      "packet_errors": 7977
+    },
+    "300B": {
+      "tp": 374881,
+      "fp": 0,
+      "fn": 119,
+      "tn": 0,
+      "extra_packets": 169,
+      "state_exact": 1138,
+      "record_exact": 993,
+      "frames": 1250,
+      "site_accuracy": 0.9996826666666667,
+      "false_bright_rate": 0.0,
+      "false_dark_rate": 0.0003173333333333333,
+      "state_exact_rate": 0.9104,
+      "record_exact_rate": 0.7944,
+      "packet_errors": 288
+    },
+    "300D": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "tn": 374999,
+      "extra_packets": 0,
+      "state_exact": 1249,
+      "record_exact": 1249,
+      "frames": 1250,
+      "site_accuracy": 0.9999973333333333,
+      "false_bright_rate": 2.666666666666667e-06,
+      "false_dark_rate": 0.0,
+      "state_exact_rate": 0.9992,
+      "record_exact_rate": 0.9992,
+      "packet_errors": 1
+    }
+  }
+}

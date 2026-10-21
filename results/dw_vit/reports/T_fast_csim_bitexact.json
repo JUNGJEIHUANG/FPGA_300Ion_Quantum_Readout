@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "validation_case": "mixed row6",
+  "bitexact_files": {
+    "_logits_q18.bin": true,
+    "_centers_raw96.hex": true,
+    "_centers.tsv": true
+  },
+  "scope": "One complete HLS C-model frame, not RTL/board equivalence"
+}

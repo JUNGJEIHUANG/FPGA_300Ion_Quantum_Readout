@@ -1,0 +1,14 @@
+{
+  "status": "ready_for_volatile_programming",
+  "variant": "dw_dilated_fast",
+  "checkpoint_sha256": "cc4debf1d0e3ee926b7b429678bd78e7e3ebd60260e4de2519bbaf6cdb8a64cc",
+  "threshold_raw": -52,
+  "bitstream_sha256": "a971ecf7969c31e0a20d39fa54e8d56b1dd71b8b815eb44dd1afd54c7198bf15",
+  "ltx_sha256": "f31a37ca6884926e71cd60b8a779569681522c6a035d12245b6d501a51bfe61b",
+  "setup_slack_ns": 0.08,
+  "hold_slack_ns": 0.051,
+  "previous_serial_bitstream_sha256": "f586cf9cb513ce11c9e1974f19b170c8a6438c6bdf5fb4e6176f6b954f818684",
+  "old_known_good_bitstream_sha256": "9f2abaabe29cc4023eac68b91235e1b447d6cad99c7d8370117df68a2ec8b08d",
+  "algorithm_values_changed": false,
+  "fpga_programmed": false
+}

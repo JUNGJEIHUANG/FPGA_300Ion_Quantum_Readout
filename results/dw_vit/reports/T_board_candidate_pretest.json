@@ -1,0 +1,94 @@
+{
+  "status": "pretest_frozen",
+  "candidate": "dw_dilated",
+  "criterion": "Mixed validation packet errors, then all errors, then mixed false-bright; tie favors non-dilated",
+  "variants": {
+    "dw": {
+      "checkpoint_sha256": "68a15a523b39314161c68838fa0cc76afcc3279b761c1be6330dae0ecae98097",
+      "threshold": 0.5,
+      "selection_key": [
+        7984,
+        8133,
+        3511,
+        0
+      ],
+      "validation_mixed": {
+        "tp": 399960,
+        "fp": 3511,
+        "fn": 4424,
+        "tn": 342105,
+        "extra_packets": 49,
+        "state_exact": 91,
+        "record_exact": 90,
+        "frames": 2500,
+        "site_accuracy": 0.98942,
+        "false_bright_rate": 0.010158673209573631,
+        "false_dark_rate": 0.010940096541900767,
+        "state_exact_rate": 0.0364,
+        "record_exact_rate": 0.036,
+        "packet_errors": 7984
+      },
+      "validation_all": {
+        "tp": 774884,
+        "fp": 3511,
+        "fn": 4500,
+        "tn": 717105,
+        "extra_packets": 122,
+        "state_exact": 2519,
+        "record_exact": 2455,
+        "frames": 5000,
+        "site_accuracy": 0.9946593333333333,
+        "false_bright_rate": 0.004872220433629006,
+        "false_dark_rate": 0.005773790583332478,
+        "state_exact_rate": 0.5038,
+        "record_exact_rate": 0.491,
+        "packet_errors": 8133
+      }
+    },
+    "dw_dilated": {
+      "checkpoint_sha256": "cc4debf1d0e3ee926b7b429678bd78e7e3ebd60260e4de2519bbaf6cdb8a64cc",
+      "threshold": 0.45,
+      "selection_key": [
+        7935,
+        8231,
+        3531,
+        1
+      ],
+      "validation_mixed": {
+        "tp": 400115,
+        "fp": 3531,
+        "fn": 4269,
+        "tn": 342085,
+        "extra_packets": 135,
+        "state_exact": 104,
+        "record_exact": 101,
+        "frames": 2500,
+        "site_accuracy": 0.9896,
+        "false_bright_rate": 0.010216540900884218,
+        "false_dark_rate": 0.010556797499406505,
+        "state_exact_rate": 0.0416,
+        "record_exact_rate": 0.0404,
+        "packet_errors": 7935
+      },
+      "validation_all": {
+        "tp": 775007,
+        "fp": 3532,
+        "fn": 4377,
+        "tn": 717084,
+        "extra_packets": 322,
+        "state_exact": 2500,
+        "record_exact": 2338,
+        "frames": 5000,
+        "site_accuracy": 0.9947273333333333,
+        "false_bright_rate": 0.0049013621679229995,
+        "false_dark_rate": 0.00561597364072139,
+        "state_exact_rate": 0.5,
+        "record_exact_rate": 0.4676,
+        "packet_errors": 8231
+      }
+    }
+  },
+  "test_accessed": false,
+  "hardware_programmed": false,
+  "note": "W8/A18, HLS, resources, and routed timing remain independent gates"
+}

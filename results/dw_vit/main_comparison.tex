@@ -1,0 +1,36 @@
+% External baseline values preserved; DW-ViT results from the frozen FP32 report.
+\subsection{Image-Only State-Readout Comparison}
+Table~\ref{tab:main_readout} reports the local benchmark comparison. DW-ViT is the proposed FPGA-adapted recognition model; all entries are measured in the same image-only scoring protocol, not copied from source-paper fidelities.
+
+\begin{table}[!ht]
+\caption{Image-Only Software Comparison on 2,000 Frames. $A$: Site Accuracy; $E_{300}$: All 300 States Correct. Values Are Percentages; Bold Marks Column Maxima.}
+\label{tab:main_readout}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{All (2,000)} & \multicolumn{2}{c}{Mixed (1,000)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Method & \multicolumn{1}{c}{\shortstack{Site\\Accuracy (\%)}} & \multicolumn{1}{c}{\shortstack{All-300\\Correct (\%)}} & \multicolumn{1}{c}{\shortstack{Site\\Accuracy (\%)}} & \multicolumn{1}{c}{\shortstack{All-300\\Correct (\%)}} \\
+\midrule
+Otsu + CCL~\cite{Otsu1979} & 79.9678 & 4.95 & 82.5653 & 0.00 \\
+IPM~\cite{Liu2025}$^\dagger$ & 98.3187 & 6.65 & 98.3473 & 1.10 \\
+MF-site~\cite{Kent2026}$^\dagger$ & 98.5507 & 24.40 & 98.1443 & 0.40 \\
+MN-2 MLE~\cite{Burrell2010}$^\dagger$ & 98.5712 & 24.40 & 97.8863 & 0.40 \\
+$9\times9$ ROI~\cite{Zhukas2021}$^\dagger$ & 96.3495 & 21.10 & 94.7603 & 0.00 \\
+\midrule
+ESPNet-p2q8~\cite{ESPNet2018} & 99.1038 & 38.70 & 98.6367 & 2.70 \\
+UNeXt-S~\cite{UNeXt2022} & 98.6672 & 29.50 & 98.0130 & 0.50 \\
+EGE-UNet~\cite{EGEUNet2023} & 98.1042 & 21.00 & 97.3867 & 0.00 \\
+DW-ViT & \textbf{99.2803} & \textbf{39.15} & \textbf{98.9520} & \textbf{5.40} \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{\columnwidth}
+\footnotesize $^\dagger$Local static-image task adaptation, not the source paper's reported fidelity. Neural results use FP32, scratch initialization, seed~1, and a common 20-epoch budget. DW-ViT has 0.376M parameters and 0.415 GMACs per frame under the stated MAC accounting. This previously exposed benchmark is a repeat diagnostic, not a new blind test.
+\end{minipage}
+\end{table}
+
+DW-ViT attains the highest reported $A$ and $E_{300}$ in every Table~\ref{tab:main_readout} column, including 99.2803\% all-frame site accuracy and 39.15\% all-300-state exact accuracy. Its 0.376M parameters and 0.415 GMACs support a compact FPGA-oriented realization, but these size figures are not lower than every neural baseline. The 219 unmatched detections reduce record-exact accuracy to 34.95\%, so the four reported state metrics do not by themselves establish uniformly better output records. On the 100 designated isotope-dark sites, DW-ViT is correct on 75, versus 100 for IPM and MN-2. The fixed-budget single-seed comparison does not establish statistical superiority, convergence, or multi-seed robustness.

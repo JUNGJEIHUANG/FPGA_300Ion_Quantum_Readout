@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "variant": "dw_dilated_fast",
+  "words_per_bank": 20930,
+  "banks": 4,
+  "all_legal_addresses_exhaustive": true,
+  "clock_enable_stalls_tested": true,
+  "read_latency_preserved": true,
+  "scope": "ROM leaf equivalence only; not full-core RTL or board equivalence"
+}

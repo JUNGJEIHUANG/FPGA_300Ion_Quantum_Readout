@@ -1,0 +1,13 @@
+{
+  "status": "prepared_only",
+  "variant": "dw_dilated_fast",
+  "checkpoint_sha256": "cc4debf1d0e3ee926b7b429678bd78e7e3ebd60260e4de2519bbaf6cdb8a64cc",
+  "threshold_raw": -52,
+  "fast_core_sha256": "ff055e87cf81fe6e8f8b8bbb727975bdd2b22ac22a20d49e83d15c726d9dcd60",
+  "prelink_sha256": "73f292122f17c8b6fc4a394fffd4eadaaaf4728392222bdb11c87f175ad4b864",
+  "source_camera_bridge_sha256": "e692bb208a0c3b77d7cb9a36dc37887d1c7db5bc5216b9a57568ad3fbab440ab",
+  "build_script_sha256": "6ad15c3e538aa78024e4ddabac09f18f0a5962f75499cf53289875eb7f27e819",
+  "previous_camera_bitstream_sha256": "f586cf9cb513ce11c9e1974f19b170c8a6438c6bdf5fb4e6176f6b954f818684",
+  "original_camera_project_modified": false,
+  "programmed": false
+}

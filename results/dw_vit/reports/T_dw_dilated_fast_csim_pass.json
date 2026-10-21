@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "variant": "dw_dilated_fast",
+  "checkpoint_sha256": "cc4debf1d0e3ee926b7b429678bd78e7e3ebd60260e4de2519bbaf6cdb8a64cc",
+  "source_sha256": "6337b4accb470a95f6dbe6257b00dcea79ed0c9063888c9f9576ea2efcd67bbe",
+  "parameter_sha256": "8ea4c9f42064d30c1158a63aeb5449627d7e14e88b4497b5357c2b3d09b4c964",
+  "full_frame_csim": true,
+  "ccl_unit": true,
+  "ccl_opencv_self_consistency": true,
+  "centers": 173,
+  "max_centroid_error_px": 1.3428571435269987e-05,
+  "logits_sha256": "61c9b60808499fe78af63a34f33db8b3a69a95795fdde8767c4e954325e976e1",
+  "accuracy_validated": false,
+  "rtl_equivalence_validated": false,
+  "fpga_programmed": false,
+  "split": "validation smoke case"
+}

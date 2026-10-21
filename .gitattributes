@@ -1,0 +1,9 @@
+# Preserve exact bytes for fingerprinted experiment sources and reports.
+/.gitattributes -text whitespace=cr-at-eol
+/.gitignore -text whitespace=cr-at-eol
+/dw_vit/** -text whitespace=cr-at-eol
+/results/dw_vit/** -text whitespace=cr-at-eol,-blank-at-eof
+/figures/dw_vit/** -text whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol
+/nets/DWViT.py -text whitespace=cr-at-eol
+/docs/legacy/** -text whitespace=cr-at-eol
+/README.md -text whitespace=cr-at-eol

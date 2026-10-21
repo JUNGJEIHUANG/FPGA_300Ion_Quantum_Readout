@@ -1,0 +1,276 @@
+{
+  "status": "complete",
+  "variant": "dw_dilated",
+  "checkpoint_sha256": "cc4debf1d0e3ee926b7b429678bd78e7e3ebd60260e4de2519bbaf6cdb8a64cc",
+  "frames": 5000,
+  "threshold": 0.45,
+  "fp32": {
+    "ALL": {
+      "tp": 775007,
+      "fp": 3532,
+      "fn": 4377,
+      "tn": 717084,
+      "extra_packets": 322,
+      "state_exact": 2500,
+      "record_exact": 2338,
+      "frames": 5000,
+      "site_accuracy": 0.9947273333333333,
+      "false_bright_rate": 0.0049013621679229995,
+      "false_dark_rate": 0.00561597364072139,
+      "state_exact_rate": 0.5,
+      "record_exact_rate": 0.4676,
+      "packet_errors": 8231
+    },
+    "150D_150B": {
+      "tp": 400115,
+      "fp": 3531,
+      "fn": 4269,
+      "tn": 342085,
+      "extra_packets": 135,
+      "state_exact": 104,
+      "record_exact": 101,
+      "frames": 2500,
+      "site_accuracy": 0.9896,
+      "false_bright_rate": 0.010216540900884218,
+      "false_dark_rate": 0.010556797499406505,
+      "state_exact_rate": 0.0416,
+      "record_exact_rate": 0.0404,
+      "packet_errors": 7935
+    },
+    "300B": {
+      "tp": 374892,
+      "fp": 0,
+      "fn": 108,
+      "tn": 0,
+      "extra_packets": 187,
+      "state_exact": 1147,
+      "record_exact": 988,
+      "frames": 1250,
+      "site_accuracy": 0.999712,
+      "false_bright_rate": 0.0,
+      "false_dark_rate": 0.000288,
+      "state_exact_rate": 0.9176,
+      "record_exact_rate": 0.7904,
+      "packet_errors": 295
+    },
+    "300D": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "tn": 374999,
+      "extra_packets": 0,
+      "state_exact": 1249,
+      "record_exact": 1249,
+      "frames": 1250,
+      "site_accuracy": 0.9999973333333333,
+      "false_bright_rate": 2.666666666666667e-06,
+      "false_dark_rate": 0.0,
+      "state_exact_rate": 0.9992,
+      "record_exact_rate": 0.9992,
+      "packet_errors": 1
+    }
+  },
+  "w8a18_boundary": {
+    "ALL": {
+      "tp": 774909,
+      "fp": 3426,
+      "fn": 4475,
+      "tn": 717190,
+      "extra_packets": 315,
+      "state_exact": 2516,
+      "record_exact": 2364,
+      "frames": 5000,
+      "site_accuracy": 0.9947326666666667,
+      "false_bright_rate": 0.004754265794819987,
+      "false_dark_rate": 0.005741713968980631,
+      "state_exact_rate": 0.5032,
+      "record_exact_rate": 0.4728,
+      "packet_errors": 8216
+    },
+    "150D_150B": {
+      "tp": 400011,
+      "fp": 3425,
+      "fn": 4373,
+      "tn": 342191,
+      "extra_packets": 143,
+      "state_exact": 112,
+      "record_exact": 109,
+      "frames": 2500,
+      "site_accuracy": 0.9896026666666666,
+      "false_bright_rate": 0.009909842136938105,
+      "false_dark_rate": 0.010813978792434913,
+      "state_exact_rate": 0.0448,
+      "record_exact_rate": 0.0436,
+      "packet_errors": 7941
+    },
+    "300B": {
+      "tp": 374898,
+      "fp": 0,
+      "fn": 102,
+      "tn": 0,
+      "extra_packets": 172,
+      "state_exact": 1155,
+      "record_exact": 1006,
+      "frames": 1250,
+      "site_accuracy": 0.999728,
+      "false_bright_rate": 0.0,
+      "false_dark_rate": 0.000272,
+      "state_exact_rate": 0.924,
+      "record_exact_rate": 0.8048,
+      "packet_errors": 274
+    },
+    "300D": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "tn": 374999,
+      "extra_packets": 0,
+      "state_exact": 1249,
+      "record_exact": 1249,
+      "frames": 1250,
+      "site_accuracy": 0.9999973333333333,
+      "false_bright_rate": 2.666666666666667e-06,
+      "false_dark_rate": 0.0,
+      "state_exact_rate": 0.9992,
+      "record_exact_rate": 0.9992,
+      "packet_errors": 1
+    }
+  },
+  "unquantized_interpreter_sample_max_abs": 4.9591064453125e-05,
+  "logit_mae": 0.3913319647220091,
+  "logit_max_abs": 13.98397445678711,
+  "mask_disagreement": 0.00039594298245614035,
+  "activation_clipping": {
+    "input": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "patch_embed": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "add_pos": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.0.norm1": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.0.qkv": {
+      "clipped": 0,
+      "elements": 601920000
+    },
+    "encoder.layers.0.softmax_probability": {
+      "clipped": 0,
+      "elements": 3931290000
+    },
+    "encoder.layers.0.attention_context": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.0.self_attn.out_proj": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.0.residual1": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.0.norm2": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.0.linear1": {
+      "clipped": 0,
+      "elements": 401280000
+    },
+    "encoder.layers.0.gelu": {
+      "clipped": 0,
+      "elements": 401280000
+    },
+    "encoder.layers.0.linear2": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.0.residual2": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.1.norm1": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.1.qkv": {
+      "clipped": 0,
+      "elements": 601920000
+    },
+    "encoder.layers.1.softmax_probability": {
+      "clipped": 0,
+      "elements": 3931290000
+    },
+    "encoder.layers.1.attention_context": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.1.self_attn.out_proj": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.1.residual1": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.1.norm2": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.1.linear1": {
+      "clipped": 0,
+      "elements": 401280000
+    },
+    "encoder.layers.1.gelu": {
+      "clipped": 0,
+      "elements": 401280000
+    },
+    "encoder.layers.1.linear2": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.layers.1.residual2": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "encoder.norm": {
+      "clipped": 0,
+      "elements": 200640000
+    },
+    "decoder.0": {
+      "clipped": 0,
+      "elements": 12840960000
+    },
+    "decoder.1": {
+      "clipped": 0,
+      "elements": 12840960000
+    },
+    "decoder.2.depthwise": {
+      "clipped": 0,
+      "elements": 12840960000
+    },
+    "decoder.2.pointwise": {
+      "clipped": 0,
+      "elements": 6420480000
+    },
+    "decoder.3": {
+      "clipped": 0,
+      "elements": 6420480000
+    },
+    "decoder.4": {
+      "clipped": 0,
+      "elements": 200640000
+    }
+  },
+  "seconds": 90.51279380000051,
+  "test_accessed": false,
+  "scope": "Software W8/A18 boundary simulation; FP32 LayerNorm/Softmax/GELU internals. Not bit-accurate HLS, RTL, board or clock result."
+}

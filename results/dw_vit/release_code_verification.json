@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "model_parameters": 376321,
+  "checkpoint_sha256": "cc4debf1d0e3ee926b7b429678bd78e7e3ebd60260e4de2519bbaf6cdb8a64cc",
+  "checkpoint_load": "strict, all keys matched",
+  "cpu_forward_max_abs_difference": 0.0,
+  "cpu_forward_bitwise_equal": true,
+  "scope": "One CPU input checks released model relocation against original source; not a recognition benchmark or hardware test.",
+  "torch": "2.11.0+cu128",
+  "hardware_accessed": false,
+  "dataset_accessed": false,
+  "training_performed": false,
+  "weights_published": false
+}

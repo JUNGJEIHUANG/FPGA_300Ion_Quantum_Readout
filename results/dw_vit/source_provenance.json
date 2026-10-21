@@ -1,0 +1,506 @@
+[
+  {
+    "source_workspace": "vit0392_fpga_deploy_20261020\\source\\ViTSeg.py",
+    "destination": "nets/DWViT.py",
+    "original_sha256": "016295d830b22782f85c534632818c1aac30494f88cf79b9b5f28b7ca23a550b",
+    "release_sha256": "d77479f5db64b3bebc022a5e9218652894453385e07f1546476c1ff29efa83a4",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\source\\T_vit_depthwise.py",
+    "destination": "dw_vit/source/T_vit_depthwise.py",
+    "original_sha256": "71d2ee10c72f81f8a37027c014db90c8b96e82098b66f43a287ce041d77d9576",
+    "release_sha256": "1394687601a4bb4f70a4e9e46e5441390b5b431ef9be31a0dcc4947346331529",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\source\\T_quant_vit_depthwise.py",
+    "destination": "dw_vit/source/T_quant_vit_depthwise.py",
+    "original_sha256": "c5a1f262b78c65ac8f73614a3fa5f063c6e85ce4ccf073b92db5d5a95ee06cdf",
+    "release_sha256": "c5a1f262b78c65ac8f73614a3fa5f063c6e85ce4ccf073b92db5d5a95ee06cdf"
+  },
+  {
+    "source_workspace": "small_baselines_seed1_20261020\\scripts\\training_utils.py",
+    "destination": "dw_vit/support/training_utils.py",
+    "original_sha256": "4cdb13c2b1b3e4b952028751557345d016132698cb412fba6c9531319568e863",
+    "release_sha256": "896099fb6893d85d28dfebaf6f6212abc8edb2f89c93653a4b2b8cb257988ea7",
+    "adapted": true
+  },
+  {
+    "source_workspace": "small_baselines_seed1_20261020\\scripts\\cache_acceleration.py",
+    "destination": "dw_vit/support/cache_acceleration.py",
+    "original_sha256": "b4b4a9f392abc3acd4f9b30a6227a677a905fa6eb3131c72420cfe8590d0f09b",
+    "release_sha256": "b4b4a9f392abc3acd4f9b30a6227a677a905fa6eb3131c72420cfe8590d0f09b"
+  },
+  {
+    "source_workspace": "small_baselines_seed1_20261020\\scripts\\packet_scoring.py",
+    "destination": "dw_vit/support/packet_scoring.py",
+    "original_sha256": "080338de7cd5b98eef7a01bfaa5f928cf22bb560241a31848021348752ac1b4b",
+    "release_sha256": "080338de7cd5b98eef7a01bfaa5f928cf22bb560241a31848021348752ac1b4b"
+  },
+  {
+    "source_workspace": "small_baselines_seed1_20261020\\scripts\\evaluation_utils.py",
+    "destination": "dw_vit/support/evaluation_utils.py",
+    "original_sha256": "d7e1c97a7e3bf6311d0917e31973ae5104c8dd72226a3142519908218ab99c66",
+    "release_sha256": "4032aaa62377e005af0c196dd69d12834ddf729d8e729c9904df6a76f5f94a95",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_train_variants.py",
+    "destination": "dw_vit/scripts/T_train_variants.py",
+    "original_sha256": "2a0c624c6aafa23d5b9c134b31bf8b9e1da57d003b346b33948978f7d107c08a",
+    "release_sha256": "d71c3c40e9637be0f631bffada37d658972ddcf6622800890cbd8bcfd0ec89cd",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_evaluate_variants.py",
+    "destination": "dw_vit/scripts/T_evaluate_variants.py",
+    "original_sha256": "295a3a8b96c5f3ed9ed48d68cc393bcd3aec248f06123bb7fc77bf62c2e6f1f4",
+    "release_sha256": "3b259eed715c2182c7718fd83016fab802d804e74a9198c6fcf398c0c2604e39",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_validate_quantization.py",
+    "destination": "dw_vit/scripts/T_validate_quantization.py",
+    "original_sha256": "193b9710ead488e17fcbb75a5701b18e72d26e7a2300d888303b31be6b5a6a9b",
+    "release_sha256": "c19656e1368cf2271208f42c82267af0c8fadfeff4f7a5a7902726474f43f7ee",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_select_board_candidate.py",
+    "destination": "dw_vit/scripts/T_select_board_candidate.py",
+    "original_sha256": "ad0f02ef5970b57fb570b25e536f5f850e1d9deafd0f6ffd87b194fdc5103e39",
+    "release_sha256": "57207d0e5c66433e952adb0a31914a7f138f716b0174ab373a4c60a7677d6abd",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_export_hls_parameters.py",
+    "destination": "dw_vit/scripts/T_export_hls_parameters.py",
+    "original_sha256": "a7ea41d3888ba236201967819482612f39400ad803f9c3c40bab8d6b82e79abd",
+    "release_sha256": "996373b5b70b31ad4d3cd0023edb38220dbcf952689ae2b1d67b88bf8943474a",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_verify_csim_gate.py",
+    "destination": "dw_vit/scripts/T_verify_csim_gate.py",
+    "original_sha256": "6cd72a9c99e264cd18f606392d1c5ec932942af0d9cb885ea488d2e3e2c8c702",
+    "release_sha256": "8f193a9a527f4c5e9d3892a8569a182a9f38430f6a2dcec3ef15de85df012bc3",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_prepare_fast_depthwise.py",
+    "destination": "dw_vit/scripts/T_prepare_fast_depthwise.py",
+    "original_sha256": "c1ba30cfd36973ee915b834999c00ac0a8466d58aa0fc6c0cdebebec416b10f7",
+    "release_sha256": "0de2443c63b0cb1c99b85e9eea6fa1ce6f405521977a64659fb197aefe1db2e9",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_pack_roms.py",
+    "destination": "dw_vit/scripts/T_pack_roms.py",
+    "original_sha256": "aff02b0729c37f501108e810be6074bf5fdffb5eef6950f48fed5bb3161e2b83",
+    "release_sha256": "f239d9cbae1b04be51bf1c8b011b7dc28e817bd852b8215108f07ee4b04281b3",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_test_rom_equivalence.py",
+    "destination": "dw_vit/scripts/T_test_rom_equivalence.py",
+    "original_sha256": "d1f72812a91535af67d74cb66dc0cd709cdc0030200a294a672e1f1c1dfa49ef",
+    "release_sha256": "08e1a1cb4fda4334acc2b598b8a61c7132abd4cf0eaccdc4077959496a205457",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_verify_roms.py",
+    "destination": "dw_vit/scripts/T_verify_roms.py",
+    "original_sha256": "1e61327849d051a0dd240a48ae6dc8e8ff1eb895a8bec31009950085b4a668ad",
+    "release_sha256": "e5a0e926b2deb3869e863ff8e308762cda68a3db7bd869430efee30762ce2bf6",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_test_decoder_schedule.py",
+    "destination": "dw_vit/scripts/T_test_decoder_schedule.py",
+    "original_sha256": "5332bbccf95a275345eadd31af19643b6c529116fae71cbe62377a162f9346ac",
+    "release_sha256": "afde645b7add839c18228964d606d0af746e1956c6070d6064d2f9d836bf73d6",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_eval_20261020\\hardware_probe\\gelu_q10_8_positive_2048.hex",
+    "destination": "dw_vit/parameters/gelu_q10_8_positive_2048.hex",
+    "original_sha256": "4bef7a40e2ffaa3984a4f2001758d33802e11e4ae7bdd3e87e8fc0d879ea97f6",
+    "release_sha256": "4bef7a40e2ffaa3984a4f2001758d33802e11e4ae7bdd3e87e8fc0d879ea97f6"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\src_dw\\vitseg_core.cpp",
+    "destination": "dw_vit/01_hls/src_dw/vitseg_core.cpp",
+    "original_sha256": "b6ca882238db65e8d8ccb47d6f3e8bb4b202f8bad6981c415536d37732fb46e0",
+    "release_sha256": "b6ca882238db65e8d8ccb47d6f3e8bb4b202f8bad6981c415536d37732fb46e0"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\src_dw\\vitseg_core.h",
+    "destination": "dw_vit/01_hls/src_dw/vitseg_core.h",
+    "original_sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d",
+    "release_sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\tb_dw\\T_tb_vitseg.cpp",
+    "destination": "dw_vit/01_hls/tb_dw/T_tb_vitseg.cpp",
+    "original_sha256": "a785b095790d3db82c6523501ae09d45d5de95c60fd923076d300f27e2799fcc",
+    "release_sha256": "fc6f8c4a0b7b1e72d0e104073a9122fd3d16760982c5f7884569a6a9912592f0",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\src_dw_dilated\\vitseg_core.cpp",
+    "destination": "dw_vit/01_hls/src_dw_dilated/vitseg_core.cpp",
+    "original_sha256": "7399f54d665b1db005240fc517c826a92c8b0939f125e3f33792688f70e33283",
+    "release_sha256": "7399f54d665b1db005240fc517c826a92c8b0939f125e3f33792688f70e33283"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\src_dw_dilated\\vitseg_core.h",
+    "destination": "dw_vit/01_hls/src_dw_dilated/vitseg_core.h",
+    "original_sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d",
+    "release_sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\tb_dw_dilated\\T_tb_vitseg.cpp",
+    "destination": "dw_vit/01_hls/tb_dw_dilated/T_tb_vitseg.cpp",
+    "original_sha256": "dbcfdf7219d94d95dfefeffe33135109fea3c4569799089824ae0d8fafe51c63",
+    "release_sha256": "4ce48d99daba282d3b1b820e65f4c32085b1fe18a528a5706bcb95e2c0a9dc20",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\src_dw_dilated_fast\\vitseg_core.cpp",
+    "destination": "dw_vit/01_hls/src_dw_dilated_fast/vitseg_core.cpp",
+    "original_sha256": "6337b4accb470a95f6dbe6257b00dcea79ed0c9063888c9f9576ea2efcd67bbe",
+    "release_sha256": "6337b4accb470a95f6dbe6257b00dcea79ed0c9063888c9f9576ea2efcd67bbe"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\src_dw_dilated_fast\\vitseg_core.h",
+    "destination": "dw_vit/01_hls/src_dw_dilated_fast/vitseg_core.h",
+    "original_sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d",
+    "release_sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\tb_dw_dilated_fast\\T_tb_vitseg.cpp",
+    "destination": "dw_vit/01_hls/tb_dw_dilated_fast/T_tb_vitseg.cpp",
+    "original_sha256": "71d1ac04198f5ab1f54d54416262d5814d79882bfdabaf2d4c892f80dfd529f5",
+    "release_sha256": "63417299b190fa642346e06f23616aa205e693455dc826c2b50635ca60bad7b1",
+    "adapted": true
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\01_hls\\T_run_variant.tcl",
+    "destination": "dw_vit/01_hls/T_run_variant.tcl",
+    "original_sha256": "0bdf65129046fe9a64a6538b8a66a9a9012168a5f97585735d9edb87a0095b00",
+    "release_sha256": "0bdf65129046fe9a64a6538b8a66a9a9012168a5f97585735d9edb87a0095b00"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\rtl\\T_usb_axi_master.sv",
+    "destination": "dw_vit/hardware/rtl/T_usb_axi_master.sv",
+    "original_sha256": "6d8af3a2415e0e0d44b9ec77ecfa15afe92fe2fe68514bcf4dce630faa78ec00",
+    "release_sha256": "6d8af3a2415e0e0d44b9ec77ecfa15afe92fe2fe68514bcf4dce630faa78ec00"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\rtl\\T_vit_replay_bridge.sv",
+    "destination": "dw_vit/hardware/rtl/T_vit_replay_bridge.sv",
+    "original_sha256": "e692bb208a0c3b77d7cb9a36dc37887d1c7db5bc5216b9a57568ad3fbab440ab",
+    "release_sha256": "e692bb208a0c3b77d7cb9a36dc37887d1c7db5bc5216b9a57568ad3fbab440ab"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\rtl\\T_vit_replay_sidecar.sv",
+    "destination": "dw_vit/hardware/rtl/T_vit_replay_sidecar.sv",
+    "original_sha256": "caf67f3b61e697ec260cba56e7c0546d1f3bf280430dea5c2936465c36162a35",
+    "release_sha256": "caf67f3b61e697ec260cba56e7c0546d1f3bf280430dea5c2936465c36162a35"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\rtl\\T_vitseg_core_stub.v",
+    "destination": "dw_vit/hardware/rtl/T_vitseg_core_stub.v",
+    "original_sha256": "33b792f0a77539fcbad264ee91a5e0092687ce3eecd85083c24dec60fd2d367e",
+    "release_sha256": "33b792f0a77539fcbad264ee91a5e0092687ce3eecd85083c24dec60fd2d367e"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_build_camera_fast.tcl",
+    "destination": "dw_vit/hardware/workspace_scripts/T_build_camera_fast.tcl",
+    "original_sha256": "6ad15c3e538aa78024e4ddabac09f18f0a5962f75499cf53289875eb7f27e819",
+    "release_sha256": "6ad15c3e538aa78024e4ddabac09f18f0a5962f75499cf53289875eb7f27e819"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_build_camera.tcl",
+    "destination": "dw_vit/hardware/workspace_scripts/T_build_camera.tcl",
+    "original_sha256": "058a5b6d098d6cedfdbad527323920aa528bc62197780446b526ef8318c358b8",
+    "release_sha256": "058a5b6d098d6cedfdbad527323920aa528bc62197780446b526ef8318c358b8"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_synth_ooc.tcl",
+    "destination": "dw_vit/hardware/workspace_scripts/T_synth_ooc.tcl",
+    "original_sha256": "0b1854578ce040593b8d24388212b65ff446a74529cc20b685eb5fa663ce6231",
+    "release_sha256": "0b1854578ce040593b8d24388212b65ff446a74529cc20b685eb5fa663ce6231"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_compact_observer_constraints.tcl",
+    "destination": "dw_vit/hardware/workspace_scripts/T_compact_observer_constraints.tcl",
+    "original_sha256": "7048d4f5a0f1652649edc9cb0999bc9d8230271c5c77a62990afb42910dd8e3f",
+    "release_sha256": "7048d4f5a0f1652649edc9cb0999bc9d8230271c5c77a62990afb42910dd8e3f"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_prepare_camera_build.py",
+    "destination": "dw_vit/hardware/workspace_scripts/T_prepare_camera_build.py",
+    "original_sha256": "92d91e9c4ade0177afbd95306c14218d731a6bd8ace682d5c1c0d2a700e6ae37",
+    "release_sha256": "92d91e9c4ade0177afbd95306c14218d731a6bd8ace682d5c1c0d2a700e6ae37"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_prepare_fast_camera_build.py",
+    "destination": "dw_vit/hardware/workspace_scripts/T_prepare_fast_camera_build.py",
+    "original_sha256": "38b662db2a77c9aea4c87510b2d18e6d719d875b7ace84d9d098b9d2f3b0927d",
+    "release_sha256": "38b662db2a77c9aea4c87510b2d18e6d719d875b7ace84d9d098b9d2f3b0927d"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_attest_camera.py",
+    "destination": "dw_vit/hardware/workspace_scripts/T_attest_camera.py",
+    "original_sha256": "50a7f2f0225b6538ca0a104f9c95db63a493fac6635f5f1c77e3cb7b11315729",
+    "release_sha256": "50a7f2f0225b6538ca0a104f9c95db63a493fac6635f5f1c77e3cb7b11315729"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_attest_camera_fast.py",
+    "destination": "dw_vit/hardware/workspace_scripts/T_attest_camera_fast.py",
+    "original_sha256": "ae028966245c070bf99451a66e4df425938314a7b84cb4afa00ed47f725f79db",
+    "release_sha256": "ae028966245c070bf99451a66e4df425938314a7b84cb4afa00ed47f725f79db"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\scripts\\T_board_replay.py",
+    "destination": "dw_vit/hardware/workspace_scripts/T_board_replay.py",
+    "original_sha256": "69c91c9bfc15cbda157f0cceff9a8e1a34739a9ee12f7dc30b4cf9b3050f5b4c",
+    "release_sha256": "69c91c9bfc15cbda157f0cceff9a8e1a34739a9ee12f7dc30b4cf9b3050f5b4c"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_architecture_profile.json",
+    "destination": "results/dw_vit/reports/T_architecture_profile.json",
+    "original_sha256": "19f090372b35b8fa1ee0e07d311005267fee9247fd08e6ca4dfdd0091c777d89",
+    "release_sha256": "19f090372b35b8fa1ee0e07d311005267fee9247fd08e6ca4dfdd0091c777d89"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_board_candidate_pretest.json",
+    "destination": "results/dw_vit/reports/T_board_candidate_pretest.json",
+    "original_sha256": "b69672f0b1f02f4b1a7ebdc0073f5a5b4ee6f8ba0a12e215c358ac8e9f329623",
+    "release_sha256": "b69672f0b1f02f4b1a7ebdc0073f5a5b4ee6f8ba0a12e215c358ac8e9f329623"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_fp32_comparison.json",
+    "destination": "results/dw_vit/reports/T_fp32_comparison.json",
+    "original_sha256": "133d2a2d68242f5d6725a9e05ec0eec6297ad9d0c2c8646d2646133e23ece58b",
+    "release_sha256": "133d2a2d68242f5d6725a9e05ec0eec6297ad9d0c2c8646d2646133e23ece58b"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_paired_fp32_compare.json",
+    "destination": "results/dw_vit/reports/T_paired_fp32_compare.json",
+    "original_sha256": "3533b1e5369aa30a722ee4dba82e2c400bc1b218a8e50ab0d79e30ac651392a6",
+    "release_sha256": "3533b1e5369aa30a722ee4dba82e2c400bc1b218a8e50ab0d79e30ac651392a6"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_dw_fp32_test.json",
+    "destination": "results/dw_vit/reports/T_dw_fp32_test.json",
+    "original_sha256": "2c2a90b98042f1f5d97abd7c1ab061b8759d3249d17ad20a05976f7eae6c7ab2",
+    "release_sha256": "2c2a90b98042f1f5d97abd7c1ab061b8759d3249d17ad20a05976f7eae6c7ab2"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_dw_dilated_fp32_test.json",
+    "destination": "results/dw_vit/reports/T_dw_dilated_fp32_test.json",
+    "original_sha256": "478eda5e1a860c85f0694b9c1278023f629f11bb31917b5966a8b95d35923049",
+    "release_sha256": "478eda5e1a860c85f0694b9c1278023f629f11bb31917b5966a8b95d35923049"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_dw_validation_thresholds.json",
+    "destination": "results/dw_vit/reports/T_dw_validation_thresholds.json",
+    "original_sha256": "ad49766141a605f664a172c4502cbacc94e05a54bda9bb396079e4bed66bc2a6",
+    "release_sha256": "ad49766141a605f664a172c4502cbacc94e05a54bda9bb396079e4bed66bc2a6"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_dw_dilated_validation_thresholds.json",
+    "destination": "results/dw_vit/reports/T_dw_dilated_validation_thresholds.json",
+    "original_sha256": "0cfbfc91c2b5246a144d74906a44daa7fd3f02dc2a1eea1f9c9b4fbf4f4eb720",
+    "release_sha256": "0cfbfc91c2b5246a144d74906a44daa7fd3f02dc2a1eea1f9c9b4fbf4f4eb720"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_dw_w8a18_validation.json",
+    "destination": "results/dw_vit/reports/T_dw_w8a18_validation.json",
+    "original_sha256": "8565a55e7817e5bd7f3dc89eb46d4a71b1d59f528688219cd3299a21e607e714",
+    "release_sha256": "8565a55e7817e5bd7f3dc89eb46d4a71b1d59f528688219cd3299a21e607e714"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_dw_dilated_w8a18_validation.json",
+    "destination": "results/dw_vit/reports/T_dw_dilated_w8a18_validation.json",
+    "original_sha256": "364eb3cf9eef33f9e42baf05b5bb0ddd89f20a5b70cecbbb3691bf653e501e58",
+    "release_sha256": "364eb3cf9eef33f9e42baf05b5bb0ddd89f20a5b70cecbbb3691bf653e501e58"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_fast_csim_bitexact.json",
+    "destination": "results/dw_vit/reports/T_fast_csim_bitexact.json",
+    "original_sha256": "d1a5a4fb243914eef892adc2fbd3f9bd58f2fe8f0522b3c9627c2f79edc6881c",
+    "release_sha256": "d1a5a4fb243914eef892adc2fbd3f9bd58f2fe8f0522b3c9627c2f79edc6881c"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_dw_dilated_fast_csim_pass.json",
+    "destination": "results/dw_vit/reports/T_dw_dilated_fast_csim_pass.json",
+    "original_sha256": "6bd990b31b1ecc946fbc9ea00defb4f464183b50b28189891fd5342da77c51a8",
+    "release_sha256": "6bd990b31b1ecc946fbc9ea00defb4f464183b50b28189891fd5342da77c51a8"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_dw_dilated_csim_quant_comparison.json",
+    "destination": "results/dw_vit/reports/T_dw_dilated_csim_quant_comparison.json",
+    "original_sha256": "ed4ea6d25190e647a16c1cd8ce1703866ac1afee2d8844bf4d2fbae117aab6ba",
+    "release_sha256": "ed4ea6d25190e647a16c1cd8ce1703866ac1afee2d8844bf4d2fbae117aab6ba"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_rom_equivalence_dw_dilated_fast.json",
+    "destination": "results/dw_vit/reports/T_rom_equivalence_dw_dilated_fast.json",
+    "original_sha256": "64ccf81d3fc1f2c59d14aa063363e96a451fb7c94d519184e95f2bdcf1be2caf",
+    "release_sha256": "64ccf81d3fc1f2c59d14aa063363e96a451fb7c94d519184e95f2bdcf1be2caf"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_camera_fast_bitstream_attestation.json",
+    "destination": "results/dw_vit/reports/T_camera_fast_bitstream_attestation.json",
+    "original_sha256": "0a86d1731f31aa0112e3414278727efce1e98dfc995377fb47df58b4873fd9a2",
+    "release_sha256": "0a86d1731f31aa0112e3414278727efce1e98dfc995377fb47df58b4873fd9a2"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_fast_camera_binding.json",
+    "destination": "results/dw_vit/reports/T_fast_camera_binding.json",
+    "original_sha256": "84f68f8eb3ff4337c0d972050847f26a3912bd446fa6884401b967a12f15c059",
+    "release_sha256": "84f68f8eb3ff4337c0d972050847f26a3912bd446fa6884401b967a12f15c059"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_fast_implementation_gate.txt",
+    "destination": "results/dw_vit/reports/T_fast_implementation_gate.txt",
+    "original_sha256": "cdc7905035a8d2a66fb9e6137b509189c4c9625da4890be5fc3f044a90a17bc6",
+    "release_sha256": "cdc7905035a8d2a66fb9e6137b509189c4c9625da4890be5fc3f044a90a17bc6"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_program_camera_fast_receipt.txt",
+    "destination": "results/dw_vit/reports/T_program_camera_fast_receipt.txt",
+    "original_sha256": "5216515a198202c07d8fe4642c650f9555d9a76b264afbdda459ba66dd85eb46",
+    "release_sha256": "5216515a198202c07d8fe4642c650f9555d9a76b264afbdda459ba66dd85eb46"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_fast_camera_routed_utilization.rpt",
+    "destination": "results/dw_vit/reports/T_fast_camera_routed_utilization.rpt",
+    "original_sha256": "53ddd21bcf96acdda7afabf35cccce2d853434a318b827cc0e88e4dc071d3815",
+    "release_sha256": "53ddd21bcf96acdda7afabf35cccce2d853434a318b827cc0e88e4dc071d3815"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_fast_camera_route_status.rpt",
+    "destination": "results/dw_vit/reports/T_fast_camera_route_status.rpt",
+    "original_sha256": "7cbac60368dd69c8b019cc95864c7c86cfbd5601a2efa6f952b74ed64b278d96",
+    "release_sha256": "7cbac60368dd69c8b019cc95864c7c86cfbd5601a2efa6f952b74ed64b278d96"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_board_dw_dilated_fast_pilot\\T_summary.json",
+    "destination": "results/dw_vit/board_pilot_snapshot.json",
+    "original_sha256": "983884c6c76f2ecdaa362edb4a4a27bc106ac85d4fea778a5c80dbebf8b8d898",
+    "release_sha256": "983884c6c76f2ecdaa362edb4a4a27bc106ac85d4fea778a5c80dbebf8b8d898"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\reports\\T_board_dw_dilated_fast_full\\T_summary.json",
+    "destination": "results/dw_vit/board_full_snapshot.json",
+    "original_sha256": "b98707274dece3b919cdf79da65f9a1e2cd44d88dbcc4b6dd6be0cab1863ccc9",
+    "release_sha256": "b98707274dece3b919cdf79da65f9a1e2cd44d88dbcc4b6dd6be0cab1863ccc9"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\runs\\dw\\run_config.json",
+    "destination": "results/dw_vit/training/dw/run_config.json",
+    "original_sha256": "3e69a517e94b5d9147290831ccdc4a23db278ef8fa525642d3bc33d1090fd61d",
+    "release_sha256": "3e69a517e94b5d9147290831ccdc4a23db278ef8fa525642d3bc33d1090fd61d"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\runs\\dw\\status.json",
+    "destination": "results/dw_vit/training/dw/status.json",
+    "original_sha256": "ae539931dff623634679edeaf0ee248d28dcba6e8ca9750b5fa085d86bafcd7b",
+    "release_sha256": "ae539931dff623634679edeaf0ee248d28dcba6e8ca9750b5fa085d86bafcd7b"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\runs\\dw\\history.csv",
+    "destination": "results/dw_vit/training/dw/history.csv",
+    "original_sha256": "fb318f3b1caee90f6c4b335afde71276d93add56d48b17ca04db1b3902b7a772",
+    "release_sha256": "fb318f3b1caee90f6c4b335afde71276d93add56d48b17ca04db1b3902b7a772"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\runs\\dw\\best_validation_summary.json",
+    "destination": "results/dw_vit/training/dw/best_validation_summary.json",
+    "original_sha256": "0271aca291481e86493924df3a04c5db47bcf00dfbaa74cd205d32ec379d5f00",
+    "release_sha256": "0271aca291481e86493924df3a04c5db47bcf00dfbaa74cd205d32ec379d5f00"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\runs\\dw_dilated\\run_config.json",
+    "destination": "results/dw_vit/training/dw_dilated/run_config.json",
+    "original_sha256": "2adff7c6462620200433849c26eb1c48a63d5095cc39ae2f89e8474a0e2f9efe",
+    "release_sha256": "2adff7c6462620200433849c26eb1c48a63d5095cc39ae2f89e8474a0e2f9efe"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\runs\\dw_dilated\\status.json",
+    "destination": "results/dw_vit/training/dw_dilated/status.json",
+    "original_sha256": "9787c6cb987656e13383376b3ac30b150e1d1154cde1082adeda4cf31488e56f",
+    "release_sha256": "9787c6cb987656e13383376b3ac30b150e1d1154cde1082adeda4cf31488e56f"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\runs\\dw_dilated\\history.csv",
+    "destination": "results/dw_vit/training/dw_dilated/history.csv",
+    "original_sha256": "888b4239b51ee9903cbb0342d40e56bbeb1c68eec378555e9f660065bb95e256",
+    "release_sha256": "888b4239b51ee9903cbb0342d40e56bbeb1c68eec378555e9f660065bb95e256"
+  },
+  {
+    "source_workspace": "vit0392_depthwise_20261021\\runs\\dw_dilated\\best_validation_summary.json",
+    "destination": "results/dw_vit/training/dw_dilated/best_validation_summary.json",
+    "original_sha256": "2bd3b4717b0bc76cfc49b7cb3cd2e1ad56b82f307484ad9ca0b78725b7a6299a",
+    "release_sha256": "2bd3b4717b0bc76cfc49b7cb3cd2e1ad56b82f307484ad9ca0b78725b7a6299a"
+  },
+  {
+    "source_workspace": "small_baselines_seed1_20261020\\reports\\model_profiles.json",
+    "destination": "results/dw_vit/baseline_model_profiles.json",
+    "original_sha256": "8597d7299105d721c8fa9e6d4758d9e8ac12d5bfc81ea0362931d6006b6502f5",
+    "release_sha256": "8597d7299105d721c8fa9e6d4758d9e8ac12d5bfc81ea0362931d6006b6502f5"
+  },
+  {
+    "source_workspace": "small_baselines_seed1_20261020\\reports\\official_sources.json",
+    "destination": "results/dw_vit/baseline_official_sources.json",
+    "original_sha256": "7474ec64f7dcd1a18a4882293bd3a7c437cda16b82ae5ebc3b648912cdd3c603",
+    "release_sha256": "7474ec64f7dcd1a18a4882293bd3a7c437cda16b82ae5ebc3b648912cdd3c603"
+  },
+  {
+    "source_workspace": "small_baselines_seed1_20261020\\reports\\selected_main_comparison.json",
+    "destination": "results/dw_vit/published_baseline_comparison.json",
+    "original_sha256": "0caab3caff082b7553463723cbf65756d7796a39d25ed2f25ecb407ff75b6e90",
+    "release_sha256": "0caab3caff082b7553463723cbf65756d7796a39d25ed2f25ecb407ff75b6e90"
+  },
+  {
+    "source_workspace": "ISCAS_3_Template\\tables\\main_comparison.tex",
+    "destination": "results/dw_vit/main_comparison.tex",
+    "original_sha256": "15f90f47b54cbfb0f2977430629b04ff2ea7bc7074afb28100aa7d2def74004f",
+    "release_sha256": "15f90f47b54cbfb0f2977430629b04ff2ea7bc7074afb28100aa7d2def74004f"
+  },
+  {
+    "source_workspace": "ISCAS_3_Template\\figure\\04_resources\\exports\\T_DW_ViT_resources_compact.pdf",
+    "destination": "figures/dw_vit/T_DW_ViT_resources_compact.pdf",
+    "original_sha256": "644bf00f18fd5f84ab60bc967ef1c69aa80162b943adc12c8146efbc730a0e51",
+    "release_sha256": "644bf00f18fd5f84ab60bc967ef1c69aa80162b943adc12c8146efbc730a0e51"
+  },
+  {
+    "source_workspace": "ISCAS_3_Template\\figure\\04_resources\\exports\\T_DW_ViT_resources_compact.png",
+    "destination": "figures/dw_vit/T_DW_ViT_resources_compact.png",
+    "original_sha256": "532fb17a3d23f1d99fa1a41f5bb0169ec00ed6073f05366f4b3c941f642f1d1c",
+    "release_sha256": "532fb17a3d23f1d99fa1a41f5bb0169ec00ed6073f05366f4b3c941f642f1d1c"
+  },
+  {
+    "source_workspace": "ISCAS_3_Template\\figure\\04_resources\\exports\\T_DW_ViT_resources_compact.svg",
+    "destination": "figures/dw_vit/T_DW_ViT_resources_compact.svg",
+    "original_sha256": "7ab3dda7f96b0996ba2b41a98dd83124f0d79e9cb551904c4eb9d618dc0cf224",
+    "release_sha256": "7ab3dda7f96b0996ba2b41a98dd83124f0d79e9cb551904c4eb9d618dc0cf224"
+  },
+  {
+    "source_workspace": "ISCAS_3_Template\\figure\\03_fpga_pipeline\\reconstruction\\T_hardware_optimization_reconstructed.drawio",
+    "destination": "figures/dw_vit/T_hardware_optimization_reconstructed.drawio",
+    "original_sha256": "6a8fb174bf2cdfe4217951dc46b1620349f3fa71c0d7c8c187681eae56207aff",
+    "release_sha256": "6a8fb174bf2cdfe4217951dc46b1620349f3fa71c0d7c8c187681eae56207aff"
+  },
+  {
+    "source_workspace": "ISCAS_3_Template\\figure\\03_fpga_pipeline\\reconstruction\\T_hardware_optimization_reconstructed.png",
+    "destination": "figures/dw_vit/T_hardware_optimization_reconstructed.png",
+    "original_sha256": "f62b01bc1c3f1877e653237c7af428f10c4386e1752d6a217deea157b2f67566",
+    "release_sha256": "f62b01bc1c3f1877e653237c7af428f10c4386e1752d6a217deea157b2f67566"
+  }
+]

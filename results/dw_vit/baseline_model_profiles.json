@@ -1,0 +1,148 @@
+{
+  "timm": "1.0.28",
+  "torch": "2.11.0+cu128",
+  "torchvision": "0.26.0+cu128",
+  "transformers": "5.12.1",
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "pretrained": false,
+  "models": {
+    "espnet": {
+      "spec": {
+        "display": "ESPNet-p2q8 + binary head",
+        "venue": "ECCV 2018",
+        "paper_url": "https://sacmehta.github.io/ESPNet/",
+        "implementation": "Official ESPNet p2 q8, native20-channel encoder/decoder, trainable1x1 projection20-to1; no encoder weights",
+        "adaptations": "Grayscale repeated3 channels, binary projection adds21 parameters; no padding/resizing at input. The multi-branch decoder cannot use classes=1 because its five-way channel split would be zero-width."
+      },
+      "parameters": 365130,
+      "state_tensor_elements": 368923,
+      "parameter_fp32_bytes": 1460520,
+      "ideal_8bit_parameter_bytes": 365130,
+      "batch16_train_step_seconds": [
+        0.31217299999843817,
+        0.05123650000314228,
+        0.050843900004110765
+      ],
+      "peak_training_allocated_bytes": 634603008,
+      "batch1_gpu_latency_median_ms": 3.206800000043586,
+      "gpu_latency_scope": "FP32 eager net forward only on random inputs; no CPU/data transfer/postprocessing; untrained model",
+      "macs": {
+        "conv_linear_macs": 366671481,
+        "attention_dot_macs": 0,
+        "total": 366671481,
+        "scope": "Dense Conv1d/Conv2d/ConvTranspose/Linear plus attention QK/AV; excludes bias, normalization, nonlinear, elementwise products, pooling, interpolation and transfers"
+      }
+    },
+    "cgnet": {
+      "spec": {
+        "display": "CGNet-M3N21",
+        "venue": "IEEE TIP, volume30",
+        "paper_url": "https://github.com/wutianyiRosun/CGNet",
+        "implementation": "Official Context_Guided_Network(classes=1,M=3,N=21,dropout_flag=True)",
+        "adaptations": "Grayscale repeated3 channels; binary classifier; native1/8 logits bilinearly upsampled by official forward."
+      },
+      "parameters": 491698,
+      "state_tensor_elements": 502004,
+      "parameter_fp32_bytes": 1966792,
+      "ideal_8bit_parameter_bytes": 491698,
+      "batch16_train_step_seconds": [
+        0.1284522999994806,
+        0.04146680000121705,
+        0.04227940000419039
+      ],
+      "peak_training_allocated_bytes": 1272131072,
+      "batch1_gpu_latency_median_ms": 7.410499994875863,
+      "gpu_latency_scope": "FP32 eager net forward only on random inputs; no CPU/data transfer/postprocessing; untrained model",
+      "macs": {
+        "conv_linear_macs": 514727808,
+        "attention_dot_macs": 0,
+        "total": 514727808,
+        "scope": "Dense Conv1d/Conv2d/ConvTranspose/Linear plus attention QK/AV; excludes bias, normalization, nonlinear, elementwise products, pooling, interpolation and transfers"
+      }
+    },
+    "unext_s": {
+      "spec": {
+        "display": "UNeXt-S",
+        "venue": "MICCAI 2022",
+        "paper_url": "https://doi.org/10.1007/978-3-031-16443-9_3",
+        "implementation": "Official UNext_S(num_classes=1), default channel widths and shifted-MLP blocks",
+        "adaptations": "Grayscale repeated3 channels; right/bottom zero pad88x456 to96x480 to satisfy native32x divisibility, crop logits back without rescaling."
+      },
+      "parameters": 253561,
+      "state_tensor_elements": 253920,
+      "parameter_fp32_bytes": 1014244,
+      "ideal_8bit_parameter_bytes": 253561,
+      "batch16_train_step_seconds": [
+        0.9178078999975696,
+        0.01695569999719737,
+        0.016157899997779168
+      ],
+      "peak_training_allocated_bytes": 274606080,
+      "batch1_gpu_latency_median_ms": 2.758499998890329,
+      "gpu_latency_scope": "FP32 eager net forward only on random inputs; no CPU/data transfer/postprocessing; untrained model",
+      "macs": {
+        "conv_linear_macs": 69770880,
+        "attention_dot_macs": 0,
+        "total": 69770880,
+        "scope": "Dense Conv1d/Conv2d/ConvTranspose/Linear plus attention QK/AV; excludes bias, normalization, nonlinear, elementwise products, pooling, interpolation and transfers"
+      }
+    },
+    "egeunet": {
+      "spec": {
+        "display": "EGE-UNet",
+        "venue": "MICCAI 2023",
+        "paper_url": "https://conferences.miccai.org/2023/papers/237-Paper1980.html",
+        "implementation": "Official EGEUNet(num_classes=1,input_channels=3,c_list=[8,16,24,32,48,64],bridge=True,gt_ds=True)",
+        "adaptations": "Grayscale repeated3 channels; zero pad to96x480 and crop. Expose pre-sigmoid logits; keep all five auxiliary bridge heads. For this controlled common-loss round only final logits get explicit loss, auxiliary bridge predictions remain indirectly trained; NOT the paper-specific deep-supervision recipe."
+      },
+      "parameters": 53374,
+      "state_tensor_elements": 53374,
+      "parameter_fp32_bytes": 213496,
+      "ideal_8bit_parameter_bytes": 53374,
+      "batch16_train_step_seconds": [
+        0.1802936000021873,
+        0.03991379999933997,
+        0.056379699999524746
+      ],
+      "peak_training_allocated_bytes": 495557120,
+      "batch1_gpu_latency_median_ms": 8.819800001219846,
+      "gpu_latency_scope": "FP32 eager net forward only on random inputs; no CPU/data transfer/postprocessing; untrained model",
+      "macs": {
+        "conv_linear_macs": 50700996,
+        "attention_dot_macs": 0,
+        "total": 50700996,
+        "scope": "Dense Conv1d/Conv2d/ConvTranspose/Linear plus attention QK/AV; excludes bias, normalization, nonlinear, elementwise products, pooling, interpolation and transfers"
+      }
+    },
+    "vit0392": {
+      "spec": {
+        "display": "ViTSeg-0.392M (local)",
+        "venue": null,
+        "paper_url": null,
+        "implementation": "Frozen local patch8 dim64 depth2 heads2 MLP2;392065 parameters; not independently published",
+        "adaptations": "Unchanged one-channel88x456 architecture; retrained from scratch, not warm-started."
+      },
+      "parameters": 392065,
+      "state_tensor_elements": 392065,
+      "parameter_fp32_bytes": 1568260,
+      "ideal_8bit_parameter_bytes": 392065,
+      "batch16_train_step_seconds": [
+        0.05643170000257669,
+        0.03580179999698885,
+        0.034488500001316424
+      ],
+      "peak_training_allocated_bytes": 955942912,
+      "batch1_gpu_latency_median_ms": 24.762499997450504,
+      "gpu_latency_scope": "FP32 eager net forward only on random inputs; no CPU/data transfer/postprocessing; untrained model",
+      "macs": {
+        "conv_linear_macs": 948946944,
+        "attention_dot_macs": 100641024,
+        "total": 1049587968,
+        "scope": "Dense Conv1d/Conv2d/ConvTranspose/Linear plus attention QK/AV; excludes bias, normalization, nonlinear, elementwise products, pooling, interpolation and transfers"
+      }
+    }
+  },
+  "package_source_sha256": {
+    "D:\\anaconda3\\Lib\\site-packages\\timm\\layers\\weight_init.py": "cabd60684d955367d39fc58b02ac94e86f5285a3f3d97b1aa9f819a72aa92df8"
+  }
+}

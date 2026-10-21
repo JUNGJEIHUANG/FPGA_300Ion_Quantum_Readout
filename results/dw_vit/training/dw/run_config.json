@@ -1,0 +1,25 @@
+{
+  "parameters": 376321,
+  "protocol": {
+    "variant": "dw",
+    "seed": 1,
+    "epochs": 20,
+    "micro_batch": 16,
+    "effective_batch": 32,
+    "accumulation": 2,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "CosineAnnealingLR(T_max=20,eta_min=1e-5)",
+    "fp32_no_amp_tf32": true,
+    "loss": "unchanged frozen baseline loss",
+    "selection": "unchanged baseline validation key",
+    "threshold": 0.5,
+    "source_train": "2a0c624c6aafa23d5b9c134b31bf8b9e1da57d003b346b33948978f7d107c08a",
+    "source_model": "71d2ee10c72f81f8a37027c014db90c8b96e82098b66f43a287ce041d77d9576",
+    "source_original": "016295d830b22782f85c534632818c1aac30494f88cf79b9b5f28b7ca23a550b",
+    "frozen_manifest": "8596cbc0a9671282b2470a544a5ed266cccdc271499ae5ceaf2076d4ffda2613",
+    "test_accessed": false,
+    "comparability": "Scratch seed1 fixed20 epochs, same baseline objective and validation selection; no convergence claim"
+  }
+}

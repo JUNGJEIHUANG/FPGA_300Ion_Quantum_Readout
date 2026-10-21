@@ -1,0 +1,13 @@
+{
+  "variant": "dw_dilated",
+  "checkpoint_sha256": "cc4debf1d0e3ee926b7b429678bd78e7e3ebd60260e4de2519bbaf6cdb8a64cc",
+  "validation_frame": "150D_150B cache row6",
+  "pixels": 40128,
+  "raw_logit_mae": 6.2727272727272725,
+  "raw_logit_max": 263,
+  "mask_disagreements": 7,
+  "c_foreground": 1242,
+  "software_foreground": 1239,
+  "threshold_raw": -52,
+  "caveat": "Software boundary is not bit-accurate HLS: FP32 nonlinear and normalization backend differences remain"
+}

@@ -1,0 +1,472 @@
+{
+  "scope": "Explicit release delta; hashes verified against actual staged Git blobs",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 450,
+      "sha256": "53b05c5468cf1603e73fd6da6e97f1d3204d9f748aa8eb2c899d480122777f3b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 369,
+      "sha256": "fb0dca22190e37bb8446b78b64e02c5c44953d8b65f8f39d41ec9d20756b3494"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4611,
+      "sha256": "e3512bb6074c4b6f093166e2755371d41ee1a74bb30e09be1cd9e49d11407068"
+    },
+    {
+      "path": "docs/legacy/DWNetV2_README.md",
+      "bytes": 13389,
+      "sha256": "f4be5d75cc8a601727fb42d95ca065baf64f7d239c705d248a58f40ed83a1294"
+    },
+    {
+      "path": "dw_vit/01_hls/T_run_variant.tcl",
+      "bytes": 1456,
+      "sha256": "0bdf65129046fe9a64a6538b8a66a9a9012168a5f97585735d9edb87a0095b00"
+    },
+    {
+      "path": "dw_vit/01_hls/src_dw/vitseg_core.cpp",
+      "bytes": 13786,
+      "sha256": "b6ca882238db65e8d8ccb47d6f3e8bb4b202f8bad6981c415536d37732fb46e0"
+    },
+    {
+      "path": "dw_vit/01_hls/src_dw/vitseg_core.h",
+      "bytes": 364,
+      "sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d"
+    },
+    {
+      "path": "dw_vit/01_hls/src_dw_dilated/vitseg_core.cpp",
+      "bytes": 13786,
+      "sha256": "7399f54d665b1db005240fc517c826a92c8b0939f125e3f33792688f70e33283"
+    },
+    {
+      "path": "dw_vit/01_hls/src_dw_dilated/vitseg_core.h",
+      "bytes": 364,
+      "sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d"
+    },
+    {
+      "path": "dw_vit/01_hls/src_dw_dilated_fast/vitseg_core.cpp",
+      "bytes": 14262,
+      "sha256": "6337b4accb470a95f6dbe6257b00dcea79ed0c9063888c9f9576ea2efcd67bbe"
+    },
+    {
+      "path": "dw_vit/01_hls/src_dw_dilated_fast/vitseg_core.h",
+      "bytes": 364,
+      "sha256": "9bd6d1aa8fb7fbb3471aab30a9a3a626a39b1ba3b5157d900cf3e64abd177b7d"
+    },
+    {
+      "path": "dw_vit/01_hls/tb_dw/T_tb_vitseg.cpp",
+      "bytes": 1980,
+      "sha256": "fc6f8c4a0b7b1e72d0e104073a9122fd3d16760982c5f7884569a6a9912592f0"
+    },
+    {
+      "path": "dw_vit/01_hls/tb_dw_dilated/T_tb_vitseg.cpp",
+      "bytes": 1988,
+      "sha256": "4ce48d99daba282d3b1b820e65f4c32085b1fe18a528a5706bcb95e2c0a9dc20"
+    },
+    {
+      "path": "dw_vit/01_hls/tb_dw_dilated_fast/T_tb_vitseg.cpp",
+      "bytes": 1993,
+      "sha256": "63417299b190fa642346e06f23616aa205e693455dc826c2b50635ca60bad7b1"
+    },
+    {
+      "path": "dw_vit/README.md",
+      "bytes": 4258,
+      "sha256": "bc17333c3d9f4ccadf7e7e91e78ac4cfb1ff6b11117dc3ec0b5b7bef5ced1607"
+    },
+    {
+      "path": "dw_vit/hardware/rtl/T_usb_axi_master.sv",
+      "bytes": 5495,
+      "sha256": "6d8af3a2415e0e0d44b9ec77ecfa15afe92fe2fe68514bcf4dce630faa78ec00"
+    },
+    {
+      "path": "dw_vit/hardware/rtl/T_vit_replay_bridge.sv",
+      "bytes": 12080,
+      "sha256": "e692bb208a0c3b77d7cb9a36dc37887d1c7db5bc5216b9a57568ad3fbab440ab"
+    },
+    {
+      "path": "dw_vit/hardware/rtl/T_vit_replay_sidecar.sv",
+      "bytes": 4453,
+      "sha256": "caf67f3b61e697ec260cba56e7c0546d1f3bf280430dea5c2936465c36162a35"
+    },
+    {
+      "path": "dw_vit/hardware/rtl/T_vitseg_core_stub.v",
+      "bytes": 1323,
+      "sha256": "33b792f0a77539fcbad264ee91a5e0092687ce3eecd85083c24dec60fd2d367e"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_attest_camera.py",
+      "bytes": 2240,
+      "sha256": "50a7f2f0225b6538ca0a104f9c95db63a493fac6635f5f1c77e3cb7b11315729"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_attest_camera_fast.py",
+      "bytes": 2534,
+      "sha256": "ae028966245c070bf99451a66e4df425938314a7b84cb4afa00ed47f725f79db"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_board_replay.py",
+      "bytes": 6448,
+      "sha256": "69c91c9bfc15cbda157f0cceff9a8e1a34739a9ee12f7dc30b4cf9b3050f5b4c"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_build_camera.tcl",
+      "bytes": 9262,
+      "sha256": "058a5b6d098d6cedfdbad527323920aa528bc62197780446b526ef8318c358b8"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_build_camera_fast.tcl",
+      "bytes": 9233,
+      "sha256": "6ad15c3e538aa78024e4ddabac09f18f0a5962f75499cf53289875eb7f27e819"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_compact_observer_constraints.tcl",
+      "bytes": 765,
+      "sha256": "7048d4f5a0f1652649edc9cb0999bc9d8230271c5c77a62990afb42910dd8e3f"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_prepare_camera_build.py",
+      "bytes": 3921,
+      "sha256": "92d91e9c4ade0177afbd95306c14218d731a6bd8ace682d5c1c0d2a700e6ae37"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_prepare_fast_camera_build.py",
+      "bytes": 2921,
+      "sha256": "38b662db2a77c9aea4c87510b2d18e6d719d875b7ace84d9d098b9d2f3b0927d"
+    },
+    {
+      "path": "dw_vit/hardware/workspace_scripts/T_synth_ooc.tcl",
+      "bytes": 1900,
+      "sha256": "0b1854578ce040593b8d24388212b65ff446a74529cc20b685eb5fa663ce6231"
+    },
+    {
+      "path": "dw_vit/parameters/gelu_q10_8_positive_2048.hex",
+      "bytes": 14336,
+      "sha256": "4bef7a40e2ffaa3984a4f2001758d33802e11e4ae7bdd3e87e8fc0d879ea97f6"
+    },
+    {
+      "path": "dw_vit/requirements.txt",
+      "bytes": 42,
+      "sha256": "8e8e130af4267714b26699e4f7c1303fb445a306fe2f0e0b2594c08a295548d1"
+    },
+    {
+      "path": "dw_vit/scripts/T_evaluate_variants.py",
+      "bytes": 7056,
+      "sha256": "3b259eed715c2182c7718fd83016fab802d804e74a9198c6fcf398c0c2604e39"
+    },
+    {
+      "path": "dw_vit/scripts/T_export_hls_parameters.py",
+      "bytes": 7391,
+      "sha256": "996373b5b70b31ad4d3cd0023edb38220dbcf952689ae2b1d67b88bf8943474a"
+    },
+    {
+      "path": "dw_vit/scripts/T_pack_roms.py",
+      "bytes": 4365,
+      "sha256": "f239d9cbae1b04be51bf1c8b011b7dc28e817bd852b8215108f07ee4b04281b3"
+    },
+    {
+      "path": "dw_vit/scripts/T_prepare_fast_depthwise.py",
+      "bytes": 5764,
+      "sha256": "0de2443c63b0cb1c99b85e9eea6fa1ce6f405521977a64659fb197aefe1db2e9"
+    },
+    {
+      "path": "dw_vit/scripts/T_select_board_candidate.py",
+      "bytes": 1456,
+      "sha256": "57207d0e5c66433e952adb0a31914a7f138f716b0174ab373a4c60a7677d6abd"
+    },
+    {
+      "path": "dw_vit/scripts/T_test_decoder_schedule.py",
+      "bytes": 1571,
+      "sha256": "afde645b7add839c18228964d606d0af746e1956c6070d6064d2f9d836bf73d6"
+    },
+    {
+      "path": "dw_vit/scripts/T_test_rom_equivalence.py",
+      "bytes": 3589,
+      "sha256": "08e1a1cb4fda4334acc2b598b8a61c7132abd4cf0eaccdc4077959496a205457"
+    },
+    {
+      "path": "dw_vit/scripts/T_train_variants.py",
+      "bytes": 7911,
+      "sha256": "d71c3c40e9637be0f631bffada37d658972ddcf6622800890cbd8bcfd0ec89cd"
+    },
+    {
+      "path": "dw_vit/scripts/T_validate_quantization.py",
+      "bytes": 4017,
+      "sha256": "c19656e1368cf2271208f42c82267af0c8fadfeff4f7a5a7902726474f43f7ee"
+    },
+    {
+      "path": "dw_vit/scripts/T_verify_csim_gate.py",
+      "bytes": 1044,
+      "sha256": "8f193a9a527f4c5e9d3892a8569a182a9f38430f6a2dcec3ef15de85df012bc3"
+    },
+    {
+      "path": "dw_vit/scripts/T_verify_roms.py",
+      "bytes": 1712,
+      "sha256": "e5a0e926b2deb3869e863ff8e308762cda68a3db7bd869430efee30762ce2bf6"
+    },
+    {
+      "path": "dw_vit/source/T_quant_vit_depthwise.py",
+      "bytes": 4423,
+      "sha256": "c5a1f262b78c65ac8f73614a3fa5f063c6e85ce4ccf073b92db5d5a95ee06cdf"
+    },
+    {
+      "path": "dw_vit/source/T_vit_depthwise.py",
+      "bytes": 432,
+      "sha256": "1394687601a4bb4f70a4e9e46e5441390b5b431ef9be31a0dcc4947346331529"
+    },
+    {
+      "path": "dw_vit/support/cache_acceleration.py",
+      "bytes": 3122,
+      "sha256": "b4b4a9f392abc3acd4f9b30a6227a677a905fa6eb3131c72420cfe8590d0f09b"
+    },
+    {
+      "path": "dw_vit/support/evaluation_utils.py",
+      "bytes": 1614,
+      "sha256": "4032aaa62377e005af0c196dd69d12834ddf729d8e729c9904df6a76f5f94a95"
+    },
+    {
+      "path": "dw_vit/support/packet_scoring.py",
+      "bytes": 1416,
+      "sha256": "080338de7cd5b98eef7a01bfaa5f928cf22bb560241a31848021348752ac1b4b"
+    },
+    {
+      "path": "dw_vit/support/training_utils.py",
+      "bytes": 7374,
+      "sha256": "896099fb6893d85d28dfebaf6f6212abc8edb2f89c93653a4b2b8cb257988ea7"
+    },
+    {
+      "path": "dw_vit/tests/test_model.py",
+      "bytes": 768,
+      "sha256": "fc5e17e48409386f1439848c15121d21283b2544943086ef087579bc58192a61"
+    },
+    {
+      "path": "figures/dw_vit/T_DW_ViT_resources_compact.pdf",
+      "bytes": 35464,
+      "sha256": "644bf00f18fd5f84ab60bc967ef1c69aa80162b943adc12c8146efbc730a0e51"
+    },
+    {
+      "path": "figures/dw_vit/T_DW_ViT_resources_compact.png",
+      "bytes": 16841,
+      "sha256": "532fb17a3d23f1d99fa1a41f5bb0169ec00ed6073f05366f4b3c941f642f1d1c"
+    },
+    {
+      "path": "figures/dw_vit/T_DW_ViT_resources_compact.svg",
+      "bytes": 12299,
+      "sha256": "7ab3dda7f96b0996ba2b41a98dd83124f0d79e9cb551904c4eb9d618dc0cf224"
+    },
+    {
+      "path": "figures/dw_vit/T_hardware_optimization_reconstructed.drawio",
+      "bytes": 35177,
+      "sha256": "6a8fb174bf2cdfe4217951dc46b1620349f3fa71c0d7c8c187681eae56207aff"
+    },
+    {
+      "path": "figures/dw_vit/T_hardware_optimization_reconstructed.png",
+      "bytes": 325271,
+      "sha256": "f62b01bc1c3f1877e653237c7af428f10c4386e1752d6a217deea157b2f67566"
+    },
+    {
+      "path": "nets/DWViT.py",
+      "bytes": 2848,
+      "sha256": "d77479f5db64b3bebc022a5e9218652894453385e07f1546476c1ff29efa83a4"
+    },
+    {
+      "path": "results/dw_vit/baseline_model_profiles.json",
+      "bytes": 7073,
+      "sha256": "8597d7299105d721c8fa9e6d4758d9e8ac12d5bfc81ea0362931d6006b6502f5"
+    },
+    {
+      "path": "results/dw_vit/baseline_official_sources.json",
+      "bytes": 7530,
+      "sha256": "7474ec64f7dcd1a18a4882293bd3a7c437cda16b82ae5ebc3b648912cdd3c603"
+    },
+    {
+      "path": "results/dw_vit/board_full_snapshot.json",
+      "bytes": 3847,
+      "sha256": "b98707274dece3b919cdf79da65f9a1e2cd44d88dbcc4b6dd6be0cab1863ccc9"
+    },
+    {
+      "path": "results/dw_vit/board_pilot_snapshot.json",
+      "bytes": 4146,
+      "sha256": "983884c6c76f2ecdaa362edb4a4a27bc106ac85d4fea778a5c80dbebf8b8d898"
+    },
+    {
+      "path": "results/dw_vit/main_comparison.tex",
+      "bytes": 2947,
+      "sha256": "15f90f47b54cbfb0f2977430629b04ff2ea7bc7074afb28100aa7d2def74004f"
+    },
+    {
+      "path": "results/dw_vit/published_baseline_comparison.json",
+      "bytes": 1880,
+      "sha256": "0caab3caff082b7553463723cbf65756d7796a39d25ed2f25ecb407ff75b6e90"
+    },
+    {
+      "path": "results/dw_vit/release_code_verification.json",
+      "bytes": 562,
+      "sha256": "d7d58b10598cfef40930b60901df80e5766cae27b4620e709e32f0301816e281"
+    },
+    {
+      "path": "results/dw_vit/release_summary.json",
+      "bytes": 4702,
+      "sha256": "a89a8930d94cb75fa8ec0f7389b18a159c294ae1229c376ea1f34e0a56df9d66"
+    },
+    {
+      "path": "results/dw_vit/reports/T_architecture_profile.json",
+      "bytes": 383,
+      "sha256": "19f090372b35b8fa1ee0e07d311005267fee9247fd08e6ca4dfdd0091c777d89"
+    },
+    {
+      "path": "results/dw_vit/reports/T_board_candidate_pretest.json",
+      "bytes": 2771,
+      "sha256": "b69672f0b1f02f4b1a7ebdc0073f5a5b4ee6f8ba0a12e215c358ac8e9f329623"
+    },
+    {
+      "path": "results/dw_vit/reports/T_camera_fast_bitstream_attestation.json",
+      "bytes": 710,
+      "sha256": "0a86d1731f31aa0112e3414278727efce1e98dfc995377fb47df58b4873fd9a2"
+    },
+    {
+      "path": "results/dw_vit/reports/T_dw_dilated_csim_quant_comparison.json",
+      "bytes": 484,
+      "sha256": "ed4ea6d25190e647a16c1cd8ce1703866ac1afee2d8844bf4d2fbae117aab6ba"
+    },
+    {
+      "path": "results/dw_vit/reports/T_dw_dilated_fast_csim_pass.json",
+      "bytes": 715,
+      "sha256": "6bd990b31b1ecc946fbc9ea00defb4f464183b50b28189891fd5342da77c51a8"
+    },
+    {
+      "path": "results/dw_vit/reports/T_dw_dilated_fp32_test.json",
+      "bytes": 4227,
+      "sha256": "478eda5e1a860c85f0694b9c1278023f629f11bb31917b5966a8b95d35923049"
+    },
+    {
+      "path": "results/dw_vit/reports/T_dw_dilated_validation_thresholds.json",
+      "bytes": 26586,
+      "sha256": "0cfbfc91c2b5246a144d74906a44daa7fd3f02dc2a1eea1f9c9b4fbf4f4eb720"
+    },
+    {
+      "path": "results/dw_vit/reports/T_dw_dilated_w8a18_validation.json",
+      "bytes": 7022,
+      "sha256": "364eb3cf9eef33f9e42baf05b5bb0ddd89f20a5b70cecbbb3691bf653e501e58"
+    },
+    {
+      "path": "results/dw_vit/reports/T_dw_fp32_test.json",
+      "bytes": 4212,
+      "sha256": "2c2a90b98042f1f5d97abd7c1ab061b8759d3249d17ad20a05976f7eae6c7ab2"
+    },
+    {
+      "path": "results/dw_vit/reports/T_dw_validation_thresholds.json",
+      "bytes": 26243,
+      "sha256": "ad49766141a605f664a172c4502cbacc94e05a54bda9bb396079e4bed66bc2a6"
+    },
+    {
+      "path": "results/dw_vit/reports/T_dw_w8a18_validation.json",
+      "bytes": 6976,
+      "sha256": "8565a55e7817e5bd7f3dc89eb46d4a71b1d59f528688219cd3299a21e607e714"
+    },
+    {
+      "path": "results/dw_vit/reports/T_fast_camera_binding.json",
+      "bytes": 736,
+      "sha256": "84f68f8eb3ff4337c0d972050847f26a3912bd446fa6884401b967a12f15c059"
+    },
+    {
+      "path": "results/dw_vit/reports/T_fast_camera_route_status.rpt",
+      "bytes": 651,
+      "sha256": "7cbac60368dd69c8b019cc95864c7c86cfbd5601a2efa6f952b74ed64b278d96"
+    },
+    {
+      "path": "results/dw_vit/reports/T_fast_camera_routed_utilization.rpt",
+      "bytes": 1236223,
+      "sha256": "53ddd21bcf96acdda7afabf35cccce2d853434a318b827cc0e88e4dc071d3815"
+    },
+    {
+      "path": "results/dw_vit/reports/T_fast_csim_bitexact.json",
+      "bytes": 251,
+      "sha256": "d1a5a4fb243914eef892adc2fbd3f9bd58f2fe8f0522b3c9627c2f79edc6881c"
+    },
+    {
+      "path": "results/dw_vit/reports/T_fast_implementation_gate.txt",
+      "bytes": 120,
+      "sha256": "cdc7905035a8d2a66fb9e6137b509189c4c9625da4890be5fc3f044a90a17bc6"
+    },
+    {
+      "path": "results/dw_vit/reports/T_fp32_comparison.json",
+      "bytes": 12218,
+      "sha256": "133d2a2d68242f5d6725a9e05ec0eec6297ad9d0c2c8646d2646133e23ece58b"
+    },
+    {
+      "path": "results/dw_vit/reports/T_paired_fp32_compare.json",
+      "bytes": 2125,
+      "sha256": "3533b1e5369aa30a722ee4dba82e2c400bc1b218a8e50ab0d79e30ac651392a6"
+    },
+    {
+      "path": "results/dw_vit/reports/T_program_camera_fast_receipt.txt",
+      "bytes": 139,
+      "sha256": "5216515a198202c07d8fe4642c650f9555d9a76b264afbdda459ba66dd85eb46"
+    },
+    {
+      "path": "results/dw_vit/reports/T_rom_equivalence_dw_dilated_fast.json",
+      "bytes": 298,
+      "sha256": "64ccf81d3fc1f2c59d14aa063363e96a451fb7c94d519184e95f2bdcf1be2caf"
+    },
+    {
+      "path": "results/dw_vit/source_provenance.json",
+      "bytes": 29202,
+      "sha256": "2786b297b57bb7a85af67be4ac0b87358014a3cfe3bd03bc8edede906f998028"
+    },
+    {
+      "path": "results/dw_vit/training/dw/best_validation_summary.json",
+      "bytes": 1784,
+      "sha256": "0271aca291481e86493924df3a04c5db47bcf00dfbaa74cd205d32ec379d5f00"
+    },
+    {
+      "path": "results/dw_vit/training/dw/history.csv",
+      "bytes": 3702,
+      "sha256": "fb318f3b1caee90f6c4b335afde71276d93add56d48b17ca04db1b3902b7a772"
+    },
+    {
+      "path": "results/dw_vit/training/dw/run_config.json",
+      "bytes": 992,
+      "sha256": "3e69a517e94b5d9147290831ccdc4a23db278ef8fa525642d3bc33d1090fd61d"
+    },
+    {
+      "path": "results/dw_vit/training/dw/status.json",
+      "bytes": 227,
+      "sha256": "ae539931dff623634679edeaf0ee248d28dcba6e8ca9750b5fa085d86bafcd7b"
+    },
+    {
+      "path": "results/dw_vit/training/dw_dilated/best_validation_summary.json",
+      "bytes": 1819,
+      "sha256": "2bd3b4717b0bc76cfc49b7cb3cd2e1ad56b82f307484ad9ca0b78725b7a6299a"
+    },
+    {
+      "path": "results/dw_vit/training/dw_dilated/history.csv",
+      "bytes": 3727,
+      "sha256": "888b4239b51ee9903cbb0342d40e56bbeb1c68eec378555e9f660065bb95e256"
+    },
+    {
+      "path": "results/dw_vit/training/dw_dilated/run_config.json",
+      "bytes": 1000,
+      "sha256": "2adff7c6462620200433849c26eb1c48a63d5095cc39ae2f89e8474a0e2f9efe"
+    },
+    {
+      "path": "results/dw_vit/training/dw_dilated/status.json",
+      "bytes": 227,
+      "sha256": "9787c6cb987656e13383376b3ac30b150e1d1154cde1082adeda4cf31488e56f"
+    }
+  ],
+  "files_scanned": 91,
+  "total_bytes": 2051755,
+  "credential_scan": "No configured secret-pattern matches",
+  "raw_images_gt_and_per_frame_outputs_uploaded": false,
+  "new_trained_checkpoints_or_rom_contents_uploaded": false,
+  "full_run_snapshot": {
+    "status": "partial",
+    "completed": 1555,
+    "requested": 2000,
+    "bitstream_sha256": "a971ecf7969c31e0a20d39fa54e8d56b1dd71b8b815eb44dd1afd54c7198bf15"
+  },
+  "note": "Manifest excludes its own file. Byte-preserving attributes keep original report and code fingerprints stable. Existing legacy contents are not revalidated."
+}
