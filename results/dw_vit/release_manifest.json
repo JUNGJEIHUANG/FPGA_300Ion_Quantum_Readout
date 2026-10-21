@@ -1,5 +1,5 @@
 {
-  "scope": "Cumulative DW-ViT source/results release allowlist; hashes verified against staged Git blobs",
+  "scope": "Cumulative DW-ViT source/results/figure release allowlist; hashes verified against staged Git blobs",
   "files": [
     {
       "path": ".gitattributes",
@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5915,
-      "sha256": "92be309da8aaf2388a876b8ffb13b91cb88ef412d48606e944fc67af441e450f"
+      "bytes": 8938,
+      "sha256": "25fa4a144058fcf2385fcb04c89546287fdb117e97a46f1925767302fd813023"
     },
     {
       "path": "docs/legacy/DWNetV2_README.md",
@@ -272,6 +272,11 @@
       "sha256": "f62b01bc1c3f1877e653237c7af428f10c4386e1752d6a217deea157b2f67566"
     },
     {
+      "path": "figures/dw_vit/T_motivation_preview.png",
+      "bytes": 247169,
+      "sha256": "07640d15abc5a281344fbc9fa2410857a722f4e1aab739f982eaa8b8f3cf49e6"
+    },
+    {
       "path": "nets/DWViT.py",
       "bytes": 2848,
       "sha256": "d77479f5db64b3bebc022a5e9218652894453385e07f1546476c1ff29efa83a4"
@@ -428,8 +433,8 @@
     },
     {
       "path": "results/dw_vit/source_provenance.json",
-      "bytes": 30020,
-      "sha256": "46d26afb96569bff51b95a257e61d77176bc45b01be2bf764297e17f9233d299"
+      "bytes": 30467,
+      "sha256": "744ade397b5b03e054f84e448832cd938db1a37a441a3227c99c1b2aeccd6faa"
     },
     {
       "path": "results/dw_vit/training/dw/best_validation_summary.json",
@@ -472,8 +477,8 @@
       "sha256": "9787c6cb987656e13383376b3ac30b150e1d1154cde1082adeda4cf31488e56f"
     }
   ],
-  "files_scanned": 94,
-  "total_bytes": 2442590,
+  "files_scanned": 95,
+  "total_bytes": 2693229,
   "credential_scan": "No configured secret-pattern matches",
   "raw_images_gt_and_per_frame_outputs_uploaded": false,
   "new_trained_checkpoints_or_rom_contents_uploaded": false,
@@ -484,5 +489,6 @@
     "bitstream_sha256": "a971ecf7969c31e0a20d39fa54e8d56b1dd71b8b815eb44dd1afd54c7198bf15"
   },
   "complete_board_audit": "passed: 2000 output hashes, decoded records, input signatures, and independently recomputed scores",
+  "readme_metric_documentation": "Metric definitions, matching rule, formulas, scopes, and limitations are stated before the result tables",
   "note": "Manifest excludes its own file. Existing legacy contents remain unchanged; software FP32 results are not replaced by hardware results."
 }

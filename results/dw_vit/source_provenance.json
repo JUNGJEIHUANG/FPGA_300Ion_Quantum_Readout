@@ -516,5 +516,12 @@
     "original_sha256": "beeb78f42b685a5bc4a20c4875af543cb74507bfff5716c1b79ba20c42e73911",
     "release_sha256": "beeb78f42b685a5bc4a20c4875af543cb74507bfff5716c1b79ba20c42e73911",
     "scope": "Offline audit output; raw board records and benchmark GT excluded."
+  },
+  {
+    "source_workspace": "ISCAS_3_Template/figure/01_motivation/exports/T_motivation_preview.png",
+    "destination": "figures/dw_vit/T_motivation_preview.png",
+    "original_sha256": "07640d15abc5a281344fbc9fa2410857a722f4e1aab739f982eaa8b8f3cf49e6",
+    "release_sha256": "07640d15abc5a281344fbc9fa2410857a722f4e1aab739f982eaa8b8f3cf49e6",
+    "scope": "Conceptual paper figure; README labels live camera feedback as unverified."
   }
 ]
