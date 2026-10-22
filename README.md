@@ -24,6 +24,12 @@ FPGA-adapted image-only readout for fixed **88 x 456** grayscale images on a cam
 
 ![DW-ViT resource utilization](figures/dw_vit/T_DW_ViT_resources_compact.png)
 
+### Post-route timing
+
+The Vivado 2022.2 screenshot below shows the routed camera implementation with a **100 MHz algorithm clock**. Across the complete design, **WNS = +0.080 ns**, **WHS = +0.051 ns**, and **WPWS = +0.062 ns**; TNS, THS, and TPWS are all zero, with no failing endpoints in these checks. All user-specified timing constraints are met. Missing I/O delay constraints and seven critical methodology warnings remain, so this result is conditional on the existing constraints and does not constitute complete timing signoff.
+
+![Vivado routed device view and post-route timing summary](figures/dw_vit/T_Vivado_postroute_timing.png)
+
 ## Metric definitions and evaluation protocol
 
 All recognition tables use the same **image-only** post-processing and offline-scoring rule. Network inference receives the grayscale image only; annotated coordinates and states are never inference inputs.
